@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/navbar.css">
+</head>
+
+<body style="background-color: black;">
+
+<!-- TICKER -->
+<div class="ff-ticker" id="ffTicker">
+  <span class="sr-only">FreshFind helps you discover Karachi's local markets — what they sell, when they're open, and what's fresh right now.</span>
+  <div class="ff-ticker__track" aria-hidden="true">
+    <span class="ff-ticker__item">Discover Karachi's local markets, all in one place</span>
+    <span class="ff-ticker__item">Know what's fresh, what's in season, and when to go</span>
+    <span class="ff-ticker__item">Real market hours. Real produce. Zero guesswork.</span>
+    <span class="ff-ticker__item">Built for Karachi shoppers who want it fresh, not stale</span>
+    <span class="ff-ticker__item">Discover Karachi's local markets, all in one place</span>
+    <span class="ff-ticker__item">Know what's fresh, what's in season, and when to go</span>
+    <span class="ff-ticker__item">Real market hours. Real produce. Zero guesswork.</span>
+    <span class="ff-ticker__item">Built for Karachi shoppers who want it fresh, not stale</span>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<header class="ff-navbar" id="ffNavbar" data-ff-state="top">
+    <div class="ff-navbar__inner">
+
+        <a href="index.html" class="ff-navbar__logo" aria-label="FreshFind home">
+            <img src="images/navbar/logo.png" alt="FreshFind">
+        </a>
+
+        <nav class="ff-navbar__nav" aria-label="Primary">
+            <ul class="ff-navbar__links">
+                <li><a href="index.html" class="ff-navbar__link is-active" data-ff-nav-link aria-current="page">Home</a></li>
+                <li><a href="index.html#markets" class="ff-navbar__link" data-ff-nav-link>Markets</a></li>
+                <li><a href="index.html#produces" class="ff-navbar__link" data-ff-nav-link>Produces</a></li>
+                <li><a href="about.html" class="ff-navbar__link" data-ff-nav-link>About Us</a></li>
+                <li><a href="contact.html" class="ff-navbar__link" data-ff-nav-link>Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <div class="ff-navbar__actions">
+            <button type="button" class="ff-navbar__bookmark" id="ffBookmarkBtn" aria-label="View saved items (0)">
+                <svg class="ff-navbar__bookmark-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M6 3.75C6 3.05964 6.55964 2.5 7.25 2.5H16.75C17.4404 2.5 18 3.05964 18 3.75V21L12 17L6 21V3.75Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+                </svg>
+                <span class="ff-navbar__bookmark-badge" id="ffBookmarkCount" data-ff-count>0</span>
+            </button>
+
+            <a href="freshfind-login.html" class="ff-navbar__auth">Login / Signup</a>
+
+            <button type="button" class="ff-navbar__hamburger" id="ffHamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="ffMobileMenu">
+                <span class="ff-navbar__hamburger-line"></span>
+                <span class="ff-navbar__hamburger-line"></span>
+                <span class="ff-navbar__hamburger-line"></span>
+            </button>
+        </div>
+    </div>
+
+    <nav class="ff-mobile-menu" id="ffMobileMenu" aria-label="Mobile" hidden>
+        <ul class="ff-mobile-menu__links">
+            <li><a href="index.html" class="ff-mobile-menu__link is-active" data-ff-nav-link aria-current="page">Home</a></li>
+            <li><a href="index.html#markets" class="ff-mobile-menu__link" data-ff-nav-link>Markets</a></li>
+            <li><a href="index.html#produces" class="ff-mobile-menu__link" data-ff-nav-link>Produces</a></li>
+            <li><a href="about.html" class="ff-mobile-menu__link" data-ff-nav-link>About Us</a></li>
+            <li><a href="contact.html" class="ff-mobile-menu__link" data-ff-nav-link>Contact Us</a></li>
+        </ul>
+        <a href="freshfind-login.html" class="ff-mobile-menu__auth">Login / Signup</a>
+    </nav>
+</header>
+
+
+  <div class="height"></div>
+  <script src="js/navbar.js"></script>
+</body>
+
+</html>

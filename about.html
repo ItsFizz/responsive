@@ -1,0 +1,533 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about FreshFind, a modern platform helping people discover local farmers markets, explore seasonal produce and plan their next fresh-food visit.">
+    <meta property="og:title" content="About FreshFind | Discover Local Farmers Markets">
+    <meta property="og:description" content="Learn about FreshFind, a modern platform helping people discover local farmers markets, explore seasonal produce and plan their next fresh-food visit.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://freshfind.com/about">
+    <link rel="canonical" href="https://freshfind.com/about">
+    <title>About FreshFind | Discover Local Farmers Markets</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+    <!-- Ticker Strip -->
+    <div class="ff-ticker" id="ffTicker">
+        <span class="sr-only">FreshFind helps you discover Karachi's local markets — what they sell, when they're open, and what's fresh right now.</span>
+        <div class="ff-ticker__track" aria-hidden="true">
+            <span class="ff-ticker__item">Discover Karachi's local markets, all in one place</span>
+            <span class="ff-ticker__item">Know what's fresh, what's in season, and when to go</span>
+            <span class="ff-ticker__item">Real market hours. Real produce. Zero guesswork.</span>
+            <span class="ff-ticker__item">Built for Karachi shoppers who want it fresh, not stale</span>
+            <span class="ff-ticker__item">Discover Karachi's local markets, all in one place</span>
+            <span class="ff-ticker__item">Know what's fresh, what's in season, and when to go</span>
+            <span class="ff-ticker__item">Real market hours. Real produce. Zero guesswork.</span>
+            <span class="ff-ticker__item">Built for Karachi shoppers who want it fresh, not stale</span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="ff-navbar" id="ffNavbar" data-ff-state="top">
+        <div class="ff-navbar__inner">
+            <!-- Logo -->
+            <a href="index.html" class="ff-navbar__logo" aria-label="FreshFind home">
+                <img src="images/navbar/logo.png" alt="FreshFind">
+            </a>
+
+            <!-- Desktop navigation -->
+            <nav class="ff-navbar__nav" aria-label="Primary">
+                <ul class="ff-navbar__links">
+                    <li><a href="index.html" class="ff-navbar__link" data-ff-nav-link>Home</a></li>
+                    <li><a href="index.html#markets" class="ff-navbar__link" data-ff-nav-link>Markets</a></li>
+                    <li><a href="index.html#produces" class="ff-navbar__link" data-ff-nav-link>Produces</a></li>
+                    <li><a href="about.html" class="ff-navbar__link is-active" data-ff-nav-link aria-current="page">About Us</a></li>
+                    <li><a href="contact.html" class="ff-navbar__link" data-ff-nav-link>Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <!-- Right-hand actions: bookmark + auth + hamburger -->
+            <div class="ff-navbar__actions">
+                <button type="button" class="ff-navbar__bookmark" id="ffBookmarkBtn" aria-label="View saved items (0)">
+                    <svg class="ff-navbar__bookmark-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M6 3.75C6 3.05964 6.55964 2.5 7.25 2.5H16.75C17.4404 2.5 18 3.05964 18 3.75V21L12 17L6 21V3.75Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+                    </svg>
+                    <span class="ff-navbar__bookmark-badge" id="ffBookmarkCount" data-ff-count>0</span>
+                </button>
+
+                <a href="freshfind-login.html" class="ff-navbar__auth">Login / Signup</a>
+
+                <!-- Hamburger (mobile only) -->
+                <button type="button" class="ff-navbar__hamburger" id="ffHamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="ffMobileMenu">
+                    <span class="ff-navbar__hamburger-line"></span>
+                    <span class="ff-navbar__hamburger-line"></span>
+                    <span class="ff-navbar__hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <nav class="ff-mobile-menu" id="ffMobileMenu" aria-label="Mobile" hidden>
+            <ul class="ff-mobile-menu__links">
+                <li><a href="index.html" class="ff-mobile-menu__link" data-ff-nav-link>Home</a></li>
+                <li><a href="index.html#markets" class="ff-mobile-menu__link" data-ff-nav-link>Markets</a></li>
+                <li><a href="index.html#produces" class="ff-mobile-menu__link" data-ff-nav-link>Produces</a></li>
+                <li><a href="about.html" class="ff-mobile-menu__link is-active" data-ff-nav-link aria-current="page">About Us</a></li>
+                <li><a href="contact.html" class="ff-mobile-menu__link" data-ff-nav-link>Contact Us</a></li>
+            </ul>
+            <a href="freshfind-login.html" class="ff-mobile-menu__auth">Login / Signup</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-about">
+        <div class="hero-content-about">
+            <div class="hero-eyebrow">ABOUT FRESHFIND</div>
+            <h1>Making Local Food<br>Easier to Find.</h1>
+            <p>FreshFind brings local farmers markets, seasonal produce and useful market information together in one simple place.</p>
+            <div class="hero-buttons">
+                <a href="index.html" class="btn btn-primary">
+                    Explore Markets
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="index.html" class="btn btn-outline">
+                    Discover Fresh Produce
+                    <i class="fas fa-leaf"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="section">
+        <div class="container">
+            <div class="intro-split">
+                <div class="intro-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=800&q=90" alt="Fresh produce at farmers market">
+                </div>
+                <div class="intro-content">
+                    <div class="section-label">OUR STORY</div>
+                    <h2>Fresh food starts with knowing where to find it.</h2>
+                    <p>Farmers markets play an important role in connecting communities with the growers who bring fresh, seasonal food to local tables. Yet information about market locations, schedules and available produce can often be scattered across different places.</p>
+                    <p>FreshFind was created to bring that information together, making it easier for people to discover local markets and plan their visits around what is available.</p>
+                    <div class="intro-steps">
+                        <div class="intro-step">
+                            <span>01</span>
+                            Discover
+                        </div>
+                        <div class="intro-step">
+                            <span>02</span>
+                            Explore
+                        </div>
+                        <div class="intro-step">
+                            <span>03</span>
+                            Visit
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Purpose Section -->
+    <section class="section purpose-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why FreshFind exists</h2>
+            </div>
+            <div class="purpose-grid">
+                <div class="purpose-card" data-modal="modal-discover">
+                    <div class="card-number">01</div>
+                    <div class="purpose-card-content">
+                        <h3>Discover Local</h3>
+                        <p>Find farmers markets in your area without searching through scattered information.</p>
+                        <span class="read-more">Click to learn more <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+                <div class="purpose-card" data-modal="modal-fresh">
+                    <div class="card-number">02</div>
+                    <div class="purpose-card-content">
+                        <h3>Know What's Fresh</h3>
+                        <p>Explore seasonal produce and discover where you can find it.</p>
+                        <span class="read-more">Click to learn more <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+                <div class="purpose-card" data-modal="modal-visit">
+                    <div class="card-number">03</div>
+                    <div class="purpose-card-content">
+                        <h3>Plan Your Visit</h3>
+                        <p>Check market days and opening hours before you head out.</p>
+                        <span class="read-more">Click to learn more <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="section">
+        <div class="container">
+            <div class="process-header">
+                <h2>Simple by design.</h2>
+                <p>Everything you need to discover your next local market.</p>
+            </div>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <h3>Search</h3>
+                    <p>Search by market, area, day or produce.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <h3>Explore</h3>
+                    <p>Compare markets and discover seasonal produce.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <h3>Visit</h3>
+                    <p>Check opening hours and plan your trip.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Editorial Section -->
+    <section class="section features-editorial">
+        <div class="container">
+            <div class="editorial-content">
+                <div class="editorial-image">
+                    <img src="https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=800&q=90" alt="Farmers market stall with fresh vegetables">
+                </div>
+                <div class="features-list">
+                    <h2>Everything fresh, in one place.</h2>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?w=100&q=80" alt="Local Markets">
+                        </div>
+                        <div class="feature-text">
+                            <h3>Local Markets</h3>
+                            <p>Discover farmers markets around you.</p>
+                            <a href="index.html">Explore markets <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <img src="https://images.unsplash.com/photo-1566385101042-1a0aa0c1268c?w=100&q=80" alt="Seasonal Produce">
+                        </div>
+                        <div class="feature-text">
+                            <h3>Seasonal Produce</h3>
+                            <p>Explore what's typically fresh and available.</p>
+                            <a href="index.html">View produce <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=100&q=80" alt="Personal Saves">
+                        </div>
+                        <div class="feature-text">
+                            <h3>Personal Saves</h3>
+                            <p>Bookmark markets and produce you want to revisit.</p>
+                            <a href="index.html">Manage bookmarks <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <img src="https://images.unsplash.com/photo-1553484771-371a605b060b?w=100&q=80" alt="Helpful Answers">
+                        </div>
+                        <div class="feature-text">
+                            <h3>Helpful Answers</h3>
+                            <p>Use FreshFind Assistant to quickly find information.</p>
+                            <a href="chatbot.html">Try assistant <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>What matters to us</h2>
+            </div>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=150&q=80" alt="Local">
+                    </div>
+                    <h3>Local</h3>
+                    <p>Supporting discovery of local markets and communities.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=150&q=80" alt="Seasonal">
+                    </div>
+                    <h3>Seasonal</h3>
+                    <p>Helping people understand what's available throughout the year.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <img src="https://images.unsplash.com/photo-1516594798947-e65505dbb29d?w=150&q=80" alt="Simple">
+                    </div>
+                    <h3>Simple</h3>
+                    <p>Making market information easy to discover and understand.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=150&q=80" alt="Accessible">
+                    </div>
+                    <h3>Accessible</h3>
+                    <p>Creating an experience that is usable across devices and for different users.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="section-sm stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number" data-value="50">50+</span>
+                    <span class="stat-label">Local Markets</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-value="100">100+</span>
+                    <span class="stat-label">Seasonal Produce</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-value="7">7</span>
+                    <span class="stat-label">Days of Discovery</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Easy Access</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Meet the people behind FreshFind</h2>
+            </div>
+            <div class="team-grid">
+                <article class="team-card">
+                    <div class="team-image">
+                        <img src="images/hussain.jpeg" alt="Hussain Aqeel - Project Lead">
+                    </div>
+                    <div class="team-info">
+                        <h3>Hussain Aqeel</h3>
+                        <div class="team-role">Project Lead </div>
+                        <p>Building a simpler way to discover local markets.</p>
+                    </div>
+                </article>
+                <article class="team-card">
+                    <div class="team-image">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <div class="team-info">
+                        <h3>Ahtesham Mir</h3>
+                        <div class="team-role">Design</div>
+                        <p>Creating an intuitive and welcoming FreshFind experience.</p>
+                    </div>
+                </article>
+                <article class="team-card">
+                    <div class="team-image">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="team-info">
+                        <h3>Abdul Karim</h3>
+                        <div class="team-role">Development</div>
+                        <p>Turning FreshFind's ideas into a fast, responsive experience.</p>
+                    </div>
+                </article>
+                <article class="team-card">
+                    <div class="team-image">
+                        <img src="images/ukasha.jpeg" alt="Ukasha Aarbi - Content & Research">
+                    </div>
+                    <div class="team-info">
+                        <h3>Ukasha Aarbi</h3>
+                        <div class="team-role">Content</div>
+                        <p>Keeping market and produce information clear and useful.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modals for Purpose Cards -->
+    <div id="modal-discover" class="purpose-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-header">
+                <div class="modal-number">01</div>
+                <h2>Discover Local Markets</h2>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&q=90" alt="Local Farmers Market">
+                </div>
+                <div class="modal-text">
+                    <h3>Why Local Discovery Matters</h3>
+                    <p>Finding fresh, locally-sourced food shouldn't require hours of research across multiple websites, social media pages, and community boards. FreshFind consolidates all farmers market information into one easy-to-search platform.</p>
+                    
+                    <h4>What You Can Find:</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> <strong>Market Locations:</strong> Precise addresses with integrated maps for easy navigation</li>
+                        <li><i class="fas fa-search"></i> <strong>Search Filters:</strong> Find markets by neighborhood, day, or specific produce</li>
+                        <li><i class="fas fa-star"></i> <strong>Market Details:</strong> Operating hours, vendor information, and parking availability</li>
+                        <li><i class="fas fa-images"></i> <strong>Visual Previews:</strong> Photos to help you know what to expect</li>
+                    </ul>
+
+                    <h4>The Problem We Solve:</h4>
+                    <p>Before FreshFind, discovering local farmers markets meant piecing together information from:</p>
+                    <ul class="problem-list">
+                        <li>Individual market websites (often outdated)</li>
+                        <li>Social media posts (scattered and inconsistent)</li>
+                        <li>Community bulletin boards (limited reach)</li>
+                        <li>Word of mouth (incomplete information)</li>
+                    </ul>
+
+                    <div class="modal-stats">
+                        <div class="stat-box">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Local Markets Listed</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Free to Use</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-fresh" class="purpose-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-header">
+                <div class="modal-number">02</div>
+                <h2>Know What's Fresh</h2>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img src="https://images.unsplash.com/photo-1610348725531-843dff563e2c?w=800&q=90" alt="Fresh Seasonal Produce">
+                </div>
+                <div class="modal-text">
+                    <h3>Seasonal Eating Made Simple</h3>
+                    <p>Understanding what's in season helps you buy fresher produce, support local farmers, and enjoy better-tasting food at lower prices. FreshFind's produce guide takes the guesswork out of seasonal shopping.</p>
+                    
+                    <h4>Features of Our Produce Guide:</h4>
+                    <ul>
+                        <li><i class="fas fa-calendar-alt"></i> <strong>Seasonal Calendar:</strong> Know exactly when each fruit or vegetable is at its peak</li>
+                        <li><i class="fas fa-leaf"></i> <strong>Product Information:</strong> Learn about varieties, storage tips, and nutritional benefits</li>
+                        <li><i class="fas fa-shopping-basket"></i> <strong>Where to Find:</strong> See which markets typically carry specific produce</li>
+                        <li><i class="fas fa-heart"></i> <strong>Save Favorites:</strong> Bookmark produce you love and get notified when it's in season</li>
+                    </ul>
+
+                    <h4>Benefits of Seasonal Shopping:</h4>
+                    <ul class="benefit-list">
+                        <li><strong>Better Taste:</strong> In-season produce is harvested at peak ripeness</li>
+                        <li><strong>Lower Prices:</strong> Abundance drives down costs during peak season</li>
+                        <li><strong>Nutritional Value:</strong> Fresher produce retains more nutrients</li>
+                        <li><strong>Environmental Impact:</strong> Less transportation means lower carbon footprint</li>
+                        <li><strong>Support Local:</strong> Buying seasonal supports your local farming community</li>
+                    </ul>
+
+                    <div class="modal-stats">
+                        <div class="stat-box">
+                            <div class="stat-number">100+</div>
+                            <div class="stat-label">Produce Items</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number">12</div>
+                            <div class="stat-label">Months Covered</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-visit" class="purpose-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-header">
+                <div class="modal-number">03</div>
+                <h2>Plan Your Visit</h2>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img src="https://images.unsplash.com/photo-1506784365847-bbad939e9335?w=800&q=90" alt="Planning Market Visit">
+                </div>
+                <div class="modal-text">
+                    <h3>Never Miss a Market Day</h3>
+                    <p>Planning ahead ensures you never waste a trip to a closed market. FreshFind provides up-to-date schedules, opening hours, and helpful tips to make your farmers market visit smooth and enjoyable.</p>
+                    
+                    <h4>Planning Tools We Offer:</h4>
+                    <ul>
+                        <li><i class="fas fa-clock"></i> <strong>Real-Time Hours:</strong> See current operating hours and days for every market</li>
+                        <li><i class="fas fa-filter"></i> <strong>"Open Today" Filter:</strong> Quickly find markets operating right now</li>
+                        <li><i class="fas fa-car"></i> <strong>Parking & Access:</strong> Information about parking, public transit, and accessibility</li>
+                        <li><i class="fas fa-bell"></i> <strong>Reminders:</strong> Set alerts for your favorite market days (coming soon)</li>
+                    </ul>
+
+                    <h4>Make the Most of Your Visit:</h4>
+                    <ul class="tips-list">
+                        <li><strong>Arrive Early:</strong> Best selection is typically in the first hour</li>
+                        <li><strong>Bring Cash:</strong> While many vendors accept cards, cash is king at farmers markets</li>
+                        <li><strong>Reusable Bags:</strong> Bring your own bags to carry purchases</li>
+                        <li><strong>Chat with Vendors:</strong> They're experts! Ask for recipe ideas and storage tips</li>
+                        <li><strong>Check Special Events:</strong> Many markets host seasonal events, cooking demos, and live music</li>
+                    </ul>
+
+                    <h4>What to Expect:</h4>
+                    <p>Most farmers markets offer a vibrant community atmosphere with:</p>
+                    <ul class="expect-list">
+                        <li>Fresh produce directly from local farmers</li>
+                        <li>Artisan products like honey, jams, and baked goods</li>
+                        <li>Prepared foods and food trucks</li>
+                        <li>Craft vendors and handmade items</li>
+                        <li>Family-friendly activities</li>
+                    </ul>
+
+                    <div class="modal-stats">
+                        <div class="stat-box">
+                            <div class="stat-number">7</div>
+                            <div class="stat-label">Days a Week</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number">24/7</div>
+                            <div class="stat-label">Access to Info</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/auth-gate.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/about.js"></script>
+</body>
+</html>

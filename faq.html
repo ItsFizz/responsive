@@ -1,0 +1,746 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Primary Meta Tags -->
+    <title>FAQ - FreshFind | Frequently Asked Questions</title>
+    <meta name="title" content="FAQ - FreshFind | Frequently Asked Questions">
+    <meta name="description" content="Find answers to common questions about FreshFind, farmers markets, seasonal produce, and how to use our platform to discover fresh local food.">
+    <meta name="keywords" content="FreshFind FAQ, farmers market questions, how to find markets, seasonal produce guide, FreshFind help">
+    <meta name="author" content="FreshFind">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://freshfind.com/faq">
+    <meta property="og:title" content="FAQ - FreshFind">
+    <meta property="og:description" content="Get answers to all your questions about finding local farmers markets and discovering fresh seasonal produce.">
+    <meta property="og:image" content="https://freshfind.com/assets/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://freshfind.com/faq">
+    <meta property="twitter:title" content="FAQ - FreshFind">
+    <meta property="twitter:description" content="Get answers to all your questions about finding local farmers markets and discovering fresh seasonal produce.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://freshfind.com/faq">
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥬</text></svg>">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/faq.css">
+</head>
+<body>
+    <!-- Ticker Strip -->
+    <div class="ff-ticker" id="ffTicker">
+        <span class="sr-only">FreshFind helps you discover Karachi's local markets — what they sell, when they're open, and what's fresh right now.</span>
+        <div class="ff-ticker__track" aria-hidden="true">
+            <span class="ff-ticker__item">Discover Karachi's local markets, all in one place</span>
+            <span class="ff-ticker__item">Know what's fresh, what's in season, and when to go</span>
+            <span class="ff-ticker__item">Real market hours. Real produce. Zero guesswork.</span>
+            <span class="ff-ticker__item">Built for Karachi shoppers who want it fresh, not stale</span>
+            <span class="ff-ticker__item">Discover Karachi's local markets, all in one place</span>
+            <span class="ff-ticker__item">Know what's fresh, what's in season, and when to go</span>
+            <span class="ff-ticker__item">Real market hours. Real produce. Zero guesswork.</span>
+            <span class="ff-ticker__item">Built for Karachi shoppers who want it fresh, not stale</span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="ff-navbar" id="ffNavbar" data-ff-state="top">
+        <div class="ff-navbar__inner">
+            <!-- Logo -->
+            <a href="index.html" class="ff-navbar__logo" aria-label="FreshFind home">
+                <img src="images/navbar/logo.png" alt="FreshFind">
+            </a>
+
+            <!-- Desktop navigation -->
+            <nav class="ff-navbar__nav" aria-label="Primary">
+                <ul class="ff-navbar__links">
+                    <li><a href="index.html" class="ff-navbar__link" data-ff-nav-link>Home</a></li>
+                    <li><a href="index.html#markets" class="ff-navbar__link" data-ff-nav-link>Markets</a></li>
+                    <li><a href="index.html#produces" class="ff-navbar__link" data-ff-nav-link>Produces</a></li>
+                    <li><a href="about.html" class="ff-navbar__link" data-ff-nav-link>About Us</a></li>
+                    <li><a href="contact.html" class="ff-navbar__link" data-ff-nav-link>Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <!-- Right-hand actions: bookmark + auth + hamburger -->
+            <div class="ff-navbar__actions">
+                <button type="button" class="ff-navbar__bookmark" id="ffBookmarkBtn" aria-label="View saved items (0)">
+                    <svg class="ff-navbar__bookmark-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M6 3.75C6 3.05964 6.55964 2.5 7.25 2.5H16.75C17.4404 2.5 18 3.05964 18 3.75V21L12 17L6 21V3.75Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+                    </svg>
+                    <span class="ff-navbar__bookmark-badge" id="ffBookmarkCount" data-ff-count>0</span>
+                </button>
+
+                <a href="freshfind-login.html" class="ff-navbar__auth">Login / Signup</a>
+
+                <!-- Hamburger (mobile only) -->
+                <button type="button" class="ff-navbar__hamburger" id="ffHamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="ffMobileMenu">
+                    <span class="ff-navbar__hamburger-line"></span>
+                    <span class="ff-navbar__hamburger-line"></span>
+                    <span class="ff-navbar__hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <nav class="ff-mobile-menu" id="ffMobileMenu" aria-label="Mobile" hidden>
+            <ul class="ff-mobile-menu__links">
+                <li><a href="index.html" class="ff-mobile-menu__link" data-ff-nav-link>Home</a></li>
+                <li><a href="index.html#markets" class="ff-mobile-menu__link" data-ff-nav-link>Markets</a></li>
+                <li><a href="index.html#produces" class="ff-mobile-menu__link" data-ff-nav-link>Produces</a></li>
+                <li><a href="about.html" class="ff-mobile-menu__link" data-ff-nav-link>About Us</a></li>
+                <li><a href="contact.html" class="ff-mobile-menu__link" data-ff-nav-link>Contact Us</a></li>
+            </ul>
+            <a href="freshfind-login.html" class="ff-mobile-menu__auth">Login / Signup</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-decorations">
+            <img src="https://images.unsplash.com/photo-1610348725531-843dff563e2c?w=200&q=80" alt="" class="hero-leaf hero-leaf-1">
+            <img src="https://images.unsplash.com/photo-1590301157890-4810ed352733?w=200&q=80" alt="" class="hero-leaf hero-leaf-2">
+            <img src="https://images.unsplash.com/photo-1518843875459-f738682238a6?w=250&q=80" alt="" class="hero-produce hero-produce-1">
+            <img src="https://images.unsplash.com/photo-1464454709131-ffd692591ee5?w=250&q=80" alt="" class="hero-produce hero-produce-2">
+        </div>
+        <div class="hero-content">
+            <h1 id="hero-title">Frequently Asked Questions</h1>
+            <p>Find answers to common questions about FreshFind, farmers markets, seasonal produce, and how to make the most of our platform.</p>
+        </div>
+    </section>
+
+    <!-- FAQ Categories -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="faq-header fade-in">
+                <h2 class="section-title">How Can We Help?</h2>
+                <p class="section-subtitle">Browse through our most frequently asked questions or select a category below.</p>
+            </div>
+
+            <div class="faq-categories fade-in">
+                <div class="category-card active" data-category="general">
+                    <div class="category-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <h3>General</h3>
+                </div>
+                <div class="category-card" data-category="markets">
+                    <div class="category-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Markets</h3>
+                </div>
+                <div class="category-card" data-category="produce">
+                    <div class="category-icon">
+                        <i class="fas fa-apple-alt"></i>
+                    </div>
+                    <h3>Produce</h3>
+                </div>
+                <div class="category-card" data-category="chatbot">
+                    <div class="category-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>AI Chatbot</h3>
+                </div>
+            </div>
+
+            <div class="faq-container">
+                <!-- General FAQs (10 questions) -->
+                <div class="faq-item fade-in" data-category="general">
+                    <div class="faq-question">
+                        <h3>What is FreshFind and why was it created?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            FreshFind is a browser-based platform designed to help residents discover nearby farmers markets. It was created because information about market locations, timings, and available produce is often scattered across flyers, community boards, and social media with no single reliable source.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in" data-category="general">
+                    <div class="faq-question">
+                        <h3>Is FreshFind free to use?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Yes! FreshFind is completely free for all users. There are no subscription fees, hidden charges, or premium tiers. You can access all features at no cost.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in" data-category="general">
+                    <div class="faq-question">
+                        <h3>What devices can I use FreshFind on?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            FreshFind is fully responsive and works seamlessly on desktops, tablets, and smartphones. The website adapts to your screen size for optimal viewing.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in" data-category="general">
+                    <div class="faq-question">
+                        <h3>Do I need to create an account to use FreshFind?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            No account is required to browse markets and produce. However, creating an account allows you to save bookmarks, add notes, and personalize your experience.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in" data-category="general">
+                    <div class="faq-question">
+                        <h3>How often is the information updated?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Market information is regularly updated to ensure accuracy. We work to keep operating hours, locations, and produce availability current.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in" data-category="general">
+                    <div class="faq-question">
+                        <h3>Can I suggest a market to be added?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Yes! We welcome suggestions for new farmers markets. Please use the contact form or reach out through our support channels with market details.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in" data-category="general">
+                    <div class="faq-question">
+                        <h3>What is the AI Chatbot feature?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            The AI chatbot is a floating widget that helps answer common questions. You can ask about markets, produce, features, and get instant responses based on our knowledge base.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in" data-category="general">
+                    <div class="faq-question">
+                        <h3>Is my data secure on FreshFind?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Yes, we take data security seriously. Your information is stored securely and we don't share personal data with third parties.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in" data-category="general">
+                    <div class="faq-question">
+                        <h3>Can I share market information with friends?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Absolutely! Each market page has social sharing options. You can share via social media, email, or copy a direct link.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in" data-category="general">
+                    <div class="faq-question">
+                        <h3>How do I contact FreshFind support?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            You can reach our support team through the Contact page, use the AI chatbot for quick answers, or email us directly. We typically respond within 24 hours.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Markets FAQs (10 questions) -->
+                <div class="faq-item fade-in" data-category="markets">
+                    <div class="faq-question">
+                        <h3>How do I search for farmers markets near me?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Use the "Find a Market" feature on the home page. You can search by area, neighborhood, or use filters for day of the week and produce type.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in" data-category="markets">
+                    <div class="faq-question">
+                        <h3>What information is shown for each market?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Each market listing includes the complete address, embedded map, operating days and hours, available products, and photos when available.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in" data-category="markets">
+                    <div class="faq-question">
+                        <h3>Can I filter markets by day of the week?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Yes! Use the day filter to find markets open on specific days. This is perfect for planning weekend visits or fitting markets into your weekly schedule.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in" data-category="markets">
+                    <div class="faq-question">
+                        <h3>How accurate are the market operating hours?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            We regularly update hours, but we recommend calling ahead during holidays or weather events as markets may adjust schedules.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in" data-category="markets">
+                    <div class="faq-question">
+                        <h3>Do markets require admission fees?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Most farmers markets are free to enter. You only pay for the products you purchase from vendors. Check individual market pages for specific details.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in" data-category="markets">
+                    <div class="faq-question">
+                        <h3>Can I see which markets are open today?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Yes! Use the "Open Today" filter on the Markets page to see which markets are currently operating. Results update based on the current day.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in" data-category="markets">
+                    <div class="faq-question">
+                        <h3>Are parking details provided?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            When available, market pages include parking information. The embedded map also helps you identify nearby parking areas.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in" data-category="markets">
+                    <div class="faq-question">
+                        <h3>Can I see photos of the markets?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Many market pages include photos to give you a preview of the atmosphere, vendors, and typical product displays.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in" data-category="markets">
+                    <div class="faq-question">
+                        <h3>What payment methods do markets accept?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Payment methods vary by vendor. Most accept cash, and many also take cards, mobile payments, or EBT/SNAP benefits. Check individual market details.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in" data-category="markets">
+                    <div class="faq-question">
+                        <h3>How do I report incorrect market information?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            If you notice outdated or incorrect information, please use the "Report Issue" link on the market page or contact our support team.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produce FAQs (10 questions) -->
+                <div class="faq-item fade-in" data-category="produce">
+                    <div class="faq-question">
+                        <h3>What is the Produce Guide?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            The Produce Guide is a browsable catalog of fruits, vegetables, herbs, and other products. Each entry includes descriptions, typical seasons, and where to find them.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in" data-category="produce">
+                    <div class="faq-question">
+                        <h3>How do I find seasonal produce?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Browse the Produce Guide and filter by season. Each produce item shows its peak season and availability months.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in" data-category="produce">
+                    <div class="faq-question">
+                        <h3>Can I search for specific produce types?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Yes! Use the search bar in the Produce Guide or filter by category (fruits, vegetables, herbs, dairy, etc.) to find specific items.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in" data-category="produce">
+                    <div class="faq-question">
+                        <h3>Which markets sell a specific produce item?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Each produce page lists markets that typically carry that item. Click on any market to see full details, hours, and location.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in" data-category="produce">
+                    <div class="faq-question">
+                        <h3>Are organic options indicated?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            When information is available, we indicate which vendors offer organic or certified options. Check individual market and vendor details.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in" data-category="produce">
+                    <div class="faq-question">
+                        <h3>Can I save my favorite produce items?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Yes! Use the bookmark feature to save produce items you're interested in. Access your saved items anytime from the Bookmarks page.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in" data-category="produce">
+                    <div class="faq-question">
+                        <h3>Do produce pages include recipes?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Currently, produce pages focus on availability and markets. Recipe suggestions may be added in future updates based on user feedback.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in" data-category="produce">
+                    <div class="faq-question">
+                        <h3>How do I know when produce is in season?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Each produce item shows its peak season (spring, summer, fall, winter) and specific months when it's typically available.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in" data-category="produce">
+                    <div class="faq-question">
+                        <h3>Can I filter markets by produce availability?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Yes! On the Markets page, use the produce filter to find markets that typically carry the items you're looking for.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in" data-category="produce">
+                    <div class="faq-question">
+                        <h3>Are specialty items like honey or baked goods listed?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Yes! The Produce Guide includes fruits, vegetables, herbs, dairy, honey, eggs, baked goods, and other artisan products available at markets.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Chatbot FAQs (10 questions) -->
+                <div class="faq-item fade-in" data-category="chatbot">
+                    <div class="faq-question">
+                        <h3>What is the FreshFind AI Chatbot?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            The FreshFind AI Chatbot is an intelligent assistant that helps you quickly find information about markets, produce, and using our platform. Ask questions in natural language and get instant answers. <a href="chatbot.html" class="faq-link">Click here</a> to learn more.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in" data-category="chatbot">
+                    <div class="faq-question">
+                        <h3>How do I access the AI Chatbot?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Look for the floating chat icon in the bottom-right corner of any page. Click it to open the chatbot window and start asking questions. <a href="chatbot.html" class="faq-link">Click here</a> to access chatbot.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in" data-category="chatbot">
+                    <div class="faq-question">
+                        <h3>What kind of questions can I ask the chatbot?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            You can ask about market locations, opening hours, seasonal produce availability, how to use features, and general platform information. The chatbot understands natural language queries. <a href="chatbot.html" class="faq-link">Click here</a> for examples.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in" data-category="chatbot">
+                    <div class="faq-question">
+                        <h3>Is the AI Chatbot available 24/7?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Yes! The AI Chatbot is available round the clock to answer your questions instantly. Whether it's 3 AM or 3 PM, our chatbot is ready to help. <a href="chatbot.html" class="faq-link">Click here</a> to start chatting.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in" data-category="chatbot">
+                    <div class="faq-question">
+                        <h3>Can the chatbot help me find specific markets?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Absolutely! Just ask "Where can I find markets in Saddar?" or "Show me markets open on Sunday" and the chatbot will provide relevant suggestions with links. <a href="chatbot.html" class="faq-link">Click here</a> to try it.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in" data-category="chatbot">
+                    <div class="faq-question">
+                        <h3>Does the chatbot understand Urdu or Hinglish?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Yes! Our chatbot understands both English and Hinglish (Roman Urdu). Feel free to ask questions in the language you're most comfortable with. <a href="chatbot.html" class="faq-link">Click here</a> for language options.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in" data-category="chatbot">
+                    <div class="faq-question">
+                        <h3>Can I save chatbot conversations?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Yes! Your chat history is automatically saved during your session. You can review previous questions and answers by scrolling up in the chat window. <a href="chatbot.html" class="faq-link">Click here</a> to view history.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in" data-category="chatbot">
+                    <div class="faq-question">
+                        <h3>What if the chatbot doesn't understand my question?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            If the chatbot can't understand your question, try rephrasing it or being more specific. It will suggest alternative questions or direct you to relevant FAQ sections. <a href="chatbot.html" class="faq-link">Click here</a> for tips.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in" data-category="chatbot">
+                    <div class="faq-question">
+                        <h3>Can the chatbot recommend produce based on season?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Yes! Ask questions like "What fruits are in season now?" or "Which vegetables should I buy in winter?" and get instant seasonal recommendations. <a href="chatbot.html" class="faq-link">Click here</a> to explore.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in" data-category="chatbot">
+                    <div class="faq-question">
+                        <h3>Is my chatbot data private and secure?</h3>
+                        <div class="faq-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Absolutely! Your conversations are encrypted and never shared with third parties. We respect your privacy and use data only to improve chatbot responses. <a href="contact.html" class="faq-link">Click here</a> for privacy policy.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-decorations">
+            <img src="https://images.unsplash.com/photo-1576045057995-568f588f82fb?w=300&q=80" alt="" class="cta-produce cta-produce-1">
+            <img src="https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=300&q=80" alt="" class="cta-produce cta-produce-2">
+        </div>
+        <div class="container">
+            <div class="cta-content fade-in">
+                <div class="cta-icon">
+                    <i class="fas fa-question-circle"></i>
+                </div>
+                <h2>Still Have Questions?</h2>
+                <p>Can't find the answer you're looking for? Our friendly support team is here to help you discover fresh, local food options.</p>
+                <a href="contact.html" class="cta-button">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- External JavaScript -->
+    <script src="js/auth-gate.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/faq.js"></script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ask Sprout | FreshFind</title>
+<meta name="description" content="Chat with Sprout, FreshFind's AI assistant — ask anything, from farmers markets to maths homework." />
+<meta name="theme-color" content="#1F4635" />
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥬</text></svg>" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+<!-- shared site styles (navbar, footer, buttons) + page styles -->
+<link rel="stylesheet" href="css/index.css" />
+<link rel="stylesheet" href="css/navbar.css" />
+<link rel="stylesheet" href="css/chatbot.css" />
+</head>
+<body class="page-chatbot">
+
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<!-- ===================== TICKER ===================== -->
+<div class="ff-ticker" id="ffTicker">
+  <span class="sr-only">FreshFind helps you discover Karachi's local markets — what they sell, when they're open, and what's fresh right now.</span>
+  <div class="ff-ticker__track" aria-hidden="true">
+    <span class="ff-ticker__item">Discover Karachi's local markets, all in one place</span>
+    <span class="ff-ticker__item">Know what's fresh, what's in season, and when to go</span>
+    <span class="ff-ticker__item">Real market hours. Real produce. Zero guesswork.</span>
+    <span class="ff-ticker__item">Built for Karachi shoppers who want it fresh, not stale</span>
+    <span class="ff-ticker__item">Discover Karachi's local markets, all in one place</span>
+    <span class="ff-ticker__item">Know what's fresh, what's in season, and when to go</span>
+    <span class="ff-ticker__item">Real market hours. Real produce. Zero guesswork.</span>
+    <span class="ff-ticker__item">Built for Karachi shoppers who want it fresh, not stale</span>
+  </div>
+</div>
+
+<!-- ===================== NAVBAR ===================== -->
+<header class="ff-navbar" id="ffNavbar" data-ff-state="top">
+  <div class="ff-navbar__inner">
+
+      <a href="chatbot.html" class="ff-navbar__logo" aria-label="FreshFind">
+        <img src="images/navbar/logo.png" alt="">
+      </a>
+
+    <nav class="ff-navbar__nav" aria-label="Primary">
+      <ul class="ff-navbar__links">
+        <li><a href="index.html" class="ff-navbar__link" data-ff-nav-link>Home</a></li>
+        <li><a href="index.html#markets" class="ff-navbar__link" data-ff-nav-link>Markets</a></li>
+        <li><a href="index.html#produces" class="ff-navbar__link" data-ff-nav-link>Produces</a></li>
+        <li><a href="about.html" class="ff-navbar__link" data-ff-nav-link>About Us</a></li>
+        <li><a href="contact.html" class="ff-navbar__link" data-ff-nav-link>Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <div class="ff-navbar__actions">
+      <button type="button" class="ff-navbar__bookmark" id="ffBookmarkBtn" aria-label="View saved items (0)">
+        <svg class="ff-navbar__bookmark-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M6 3.75C6 3.05964 6.55964 2.5 7.25 2.5H16.75C17.4404 2.5 18 3.05964 18 3.75V21L12 17L6 21V3.75Z"
+            stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+        </svg>
+        <span class="ff-navbar__bookmark-badge" id="ffBookmarkCount" data-ff-count>0</span>
+      </button>
+
+      <a href="freshfind-login.html" class="ff-navbar__auth">Login / Signup</a>
+
+      <button type="button" class="ff-navbar__hamburger" id="ffHamburgerBtn" aria-label="Open menu"
+        aria-expanded="false" aria-controls="ffMobileMenu">
+        <span class="ff-navbar__hamburger-line"></span>
+        <span class="ff-navbar__hamburger-line"></span>
+        <span class="ff-navbar__hamburger-line"></span>
+      </button>
+    </div>
+  </div>
+
+  <nav class="ff-mobile-menu" id="ffMobileMenu" aria-label="Mobile" hidden>
+    <ul class="ff-mobile-menu__links">
+      <li><a href="index.html" class="ff-mobile-menu__link" data-ff-nav-link>Home</a></li>
+      <li><a href="index.html#markets" class="ff-mobile-menu__link" data-ff-nav-link>Markets</a></li>
+      <li><a href="index.html#produces" class="ff-mobile-menu__link" data-ff-nav-link>Produces</a></li>
+      <li><a href="about.html" class="ff-mobile-menu__link" data-ff-nav-link>About Us</a></li>
+      <li><a href="contact.html" class="ff-mobile-menu__link" data-ff-nav-link>Contact Us</a></li>
+    </ul>
+    <a href="freshfind-login.html" class="ff-mobile-menu__auth">Login / Signup</a>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- ===================== PAGE HEADER ===================== -->
+  <section class="page-header">
+    <div class="page-header-inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li aria-current="page">Ask Sprout</li>
+        </ol>
+      </nav>
+      <h1>Ask <span>Sprout</span></h1>
+      <p class="page-lead">Got a question about FreshFind? Sprout knows every market, timing, produce pick and feature on this website. English ya Roman Urdu, sab chalega.</p>
+    </div>
+  </section>
+
+  <!-- ===================== CHAT ===================== -->
+  <section class="chat-section">
+    <div class="chat-card">
+
+      <div class="chat-card-head">
+        <div class="bot-id">
+          <span class="bot-avatar" aria-hidden="true">🌱</span>
+          <div>
+            <strong>Sprout</strong>
+            <small id="botStatus">Online · ready when you are</small>
+          </div>
+        </div>
+        <button type="button" class="btn btn-outline btn-sm" id="newChatBtn">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+          New chat
+        </button>
+      </div>
+
+      <!-- filled by chatbot.js: welcome message + website questions -->
+      <div class="chat-log" id="chatLog" aria-live="polite"></div>
+
+      <form class="composer" id="composer">
+        <label for="prompt" class="sr-only">Your message</label>
+        <textarea id="prompt" rows="1" placeholder="Type your question…" maxlength="8000" autocomplete="off"></textarea>
+        <button type="submit" class="send-btn" id="sendBtn" aria-label="Send message">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+      </form>
+      <p class="composer-note">Enter to send · Shift + Enter for a new line · Sprout answers questions about FreshFind — type <strong>help</strong> to see its topics.</p>
+    </div>
+  </section>
+
+</main>
+
+
+
+<script src="js/auth-gate.js"></script>
+<script src="js/navbar.js" defer></script>
+<script src="data/chatbot-data.js" defer></script>
+<script src="js/chatbot.js" defer></script>
+</body>
+</html>

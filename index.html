@@ -1,0 +1,462 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FreshFind - Discover local farmers markets, seasonal produce, and fresh food in Karachi. Find market hours, locations, and what's in season.">
+    <title>FreshFind | Discover Local Farmers Markets</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥬</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<!-- TICKER -->
+<div class="ff-ticker" id="ffTicker">
+    <span class="sr-only">FreshFind helps you discover Karachi's local markets — what they sell, when they're open, and what's fresh right now.</span>
+    <div class="ff-ticker__track" aria-hidden="true">
+        <span class="ff-ticker__item">Discover Karachi's local markets, all in one place</span>
+        <span class="ff-ticker__item">Know what's fresh, what's in season, and when to go</span>
+        <span class="ff-ticker__item">Real market hours. Real produce. Zero guesswork.</span>
+        <span class="ff-ticker__item">Built for Karachi shoppers who want it fresh, not stale</span>
+        <span class="ff-ticker__item">Discover Karachi's local markets, all in one place</span>
+        <span class="ff-ticker__item">Know what's fresh, what's in season, and when to go</span>
+        <span class="ff-ticker__item">Real market hours. Real produce. Zero guesswork.</span>
+        <span class="ff-ticker__item">Built for Karachi shoppers who want it fresh, not stale</span>
+    </div>
+</div>
+
+<!-- NAVBAR -->
+<header class="ff-navbar" id="ffNavbar" data-ff-state="top">
+    <div class="ff-navbar__inner">
+
+        <a href="index.html" class="ff-navbar__logo" aria-label="FreshFind home">
+            <img src="images/navbar/logo.png" alt="FreshFind">
+        </a>
+
+        <nav class="ff-navbar__nav" aria-label="Primary">
+            <ul class="ff-navbar__links">
+                <li><a href="index.html" class="ff-navbar__link is-active" data-ff-nav-link aria-current="page">Home</a></li>
+                <li><a href="index.html#markets" class="ff-navbar__link" data-ff-nav-link>Markets</a></li>
+                <li><a href="index.html#produces" class="ff-navbar__link" data-ff-nav-link>Produces</a></li>
+                <li><a href="about.html" class="ff-navbar__link" data-ff-nav-link>About Us</a></li>
+                <li><a href="contact.html" class="ff-navbar__link" data-ff-nav-link>Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <div class="ff-navbar__actions">
+            <button type="button" class="ff-navbar__bookmark" id="ffBookmarkBtn" aria-label="View saved items (0)">
+                <svg class="ff-navbar__bookmark-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M6 3.75C6 3.05964 6.55964 2.5 7.25 2.5H16.75C17.4404 2.5 18 3.05964 18 3.75V21L12 17L6 21V3.75Z"
+                        stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+                </svg>
+                <span class="ff-navbar__bookmark-badge" id="ffBookmarkCount" data-ff-count>0</span>
+            </button>
+
+            <a href="freshfind-login.html" class="ff-navbar__auth">Login / Signup</a>
+
+            <button type="button" class="ff-navbar__hamburger" id="ffHamburgerBtn" aria-label="Open menu"
+                aria-expanded="false" aria-controls="ffMobileMenu">
+                <span class="ff-navbar__hamburger-line"></span>
+                <span class="ff-navbar__hamburger-line"></span>
+                <span class="ff-navbar__hamburger-line"></span>
+            </button>
+        </div>
+    </div>
+
+    <nav class="ff-mobile-menu" id="ffMobileMenu" aria-label="Mobile" hidden>
+        <ul class="ff-mobile-menu__links">
+            <li><a href="index.html" class="ff-mobile-menu__link is-active" data-ff-nav-link aria-current="page">Home</a></li>
+            <li><a href="index.html#markets" class="ff-mobile-menu__link" data-ff-nav-link>Markets</a></li>
+            <li><a href="index.html#produces" class="ff-mobile-menu__link" data-ff-nav-link>Produces</a></li>
+            <li><a href="about.html" class="ff-mobile-menu__link" data-ff-nav-link>About Us</a></li>
+            <li><a href="contact.html" class="ff-mobile-menu__link" data-ff-nav-link>Contact Us</a></li>
+        </ul>
+        <a href="freshfind-login.html" class="ff-mobile-menu__auth">Login / Signup</a>
+    </nav>
+</header>
+
+<main id="main">
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="hero-content">
+                <p class="eyebrow">FRESHFIND · KARACHI</p>
+                <h1>Fresh Local <em>Markets</em></h1>
+                <p class="hero-sub">Discover Karachi's farmers markets — what they sell, when they open, and what's fresh right now. No guesswork, just good food.</p>
+
+                <div class="hero-meta">
+                    <span class="live-chip">
+                        <span class="dot"></span>
+                        50+ Markets Listed
+                    </span>
+                    <span class="live-chip">
+                        <span class="dot"></span>
+                        Updated Weekly
+                    </span>
+                </div>
+
+                <div class="hero-ctas">
+                    <a href="about.html" class="btn btn-primary">
+                        Explore FreshFind
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                    </a>
+                    <a href="chatbot.html" class="btn btn-ghost">
+                        Ask Sprout
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg>
+                    </a>
+                </div>
+
+                <p class="visitor-counter">Helping <strong>1,200+</strong> Karachi residents find fresh produce weekly</p>
+            </div>
+
+            <figure class="hero-photo">
+                <img src="img/hero-market.jpg" alt="Fresh produce at a local Karachi farmers market">
+            </figure>
+        </div>
+
+        <!-- Stats Strip -->
+        <div class="stats-strip">
+            <div class="stat-card">
+                <span class="stat-num">50+</span>
+                <span class="stat-label">Local Markets</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-num">100+</span>
+                <span class="stat-label">Produce Types</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-num">7</span>
+                <span class="stat-label">Days a Week</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-num">Free</span>
+                <span class="stat-label">Always Free</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- MARKETS -->
+    <section class="section" id="markets">
+        <div class="section-head">
+            <span class="section-tag">Featured</span>
+            <h2>Popular Markets</h2>
+            <p>Some of Karachi's best farmers markets with fresh, seasonal produce from local vendors.</p>
+        </div>
+
+        <div class="market-grid">
+            <article class="market-card reveal">
+                <div class="market-thumb">
+                    <img src="img/market-apples.jpg" alt="Fresh apples at Saddar market">
+                    <span class="status-chip open">Open Today</span>
+                    <button class="bookmark-star" aria-label="Save Saddar Sunday Market">★</button>
+                </div>
+                <div class="market-body">
+                    <h3>Saddar Sunday Market</h3>
+                    <p class="market-loc">
+                        <svg class="loc-pin" viewBox="0 0 24 24" width="12" height="12" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+                        Saddar, Karachi
+                    </p>
+                    <p class="market-desc">Fresh fruits, vegetables, and local produce every Sunday morning.</p>
+                    <div class="market-tags">
+                        <span class="tag">Fruits</span>
+                        <span class="tag">Vegetables</span>
+                        <span class="tag">Organic</span>
+                    </div>
+                </div>
+                <div class="market-foot">
+                    <span>Sunday · 6AM–2PM</span>
+                    <span class="distance-chip">2.5 km</span>
+                </div>
+            </article>
+
+            <article class="market-card reveal" style="--d:.08s">
+                <div class="market-thumb">
+                    <img src="img/market-greens.jpg" alt="Fresh greens at Gulshan market">
+                    <span class="status-chip open">Open Now</span>
+                    <button class="bookmark-star" aria-label="Save Gulshan Fresh Market">★</button>
+                </div>
+                <div class="market-body">
+                    <h3>Gulshan Fresh Market</h3>
+                    <p class="market-loc">
+                        <svg class="loc-pin" viewBox="0 0 24 24" width="12" height="12" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+                        Gulshan-e-Iqbal, Karachi
+                    </p>
+                    <p class="market-desc">Daily fresh vegetables, herbs, and seasonal fruits from local farms.</p>
+                    <div class="market-tags">
+                        <span class="tag">Daily</span>
+                        <span class="tag">Herbs</span>
+                        <span class="tag">Local</span>
+                    </div>
+                </div>
+                <div class="market-foot">
+                    <span>Daily · 5AM–12PM</span>
+                    <span class="distance-chip">4.1 km</span>
+                </div>
+            </article>
+
+            <article class="market-card reveal" style="--d:.16s">
+                <div class="market-thumb">
+                    <img src="img/market-cheese.jpg" alt="Products at Defence market">
+                    <span class="status-chip">Opens 7AM</span>
+                    <button class="bookmark-star" aria-label="Save Defence Farmers Market">★</button>
+                </div>
+                <div class="market-body">
+                    <h3>Defence Farmers Market</h3>
+                    <p class="market-loc">
+                        <svg class="loc-pin" viewBox="0 0 24 24" width="12" height="12" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+                        DHA Phase 2, Karachi
+                    </p>
+                    <p class="market-desc">Premium organic produce, dairy, and imported fruits in Defence.</p>
+                    <div class="market-tags">
+                        <span class="tag">Premium</span>
+                        <span class="tag">Organic</span>
+                        <span class="tag">Dairy</span>
+                    </div>
+                </div>
+                <div class="market-foot">
+                    <span>Tue–Sun · 7AM–8PM</span>
+                    <span class="distance-chip">6.8 km</span>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- SEASONAL -->
+    <section class="section highlights" id="produces">
+        <div class="section-head">
+            <span class="section-tag">What's In Season</span>
+            <h2>Fresh Right Now</h2>
+            <p>Produce that's currently at peak freshness across Karachi's markets.</p>
+        </div>
+
+        <div class="seasonal-strip">
+            <div class="seasonal-card reveal">
+                <div class="seasonal-icon">
+                    <img src="img/season-apples.jpg" alt="Apples">
+                </div>
+                <h4>Apples</h4>
+                <span>Peak Season</span>
+            </div>
+            <div class="seasonal-card reveal" style="--d:.06s">
+                <div class="seasonal-icon">
+                    <img src="img/season-herbs.jpg" alt="Fresh Herbs">
+                </div>
+                <h4>Fresh Herbs</h4>
+                <span>Year Round</span>
+            </div>
+            <div class="seasonal-card reveal" style="--d:.12s">
+                <div class="seasonal-icon">
+                    <img src="img/season-kale.jpg" alt="Leafy Greens">
+                </div>
+                <h4>Leafy Greens</h4>
+                <span>Winter Best</span>
+            </div>
+            <div class="seasonal-card reveal" style="--d:.18s">
+                <div class="seasonal-icon">
+                    <img src="img/season-honey.jpg" alt="Local Honey">
+                </div>
+                <h4>Local Honey</h4>
+                <span>Always Fresh</span>
+            </div>
+            <div class="seasonal-card reveal" style="--d:.24s">
+                <div class="seasonal-icon">
+                    <img src="img/season-pumpkin.jpg" alt="Pumpkins">
+                </div>
+                <h4>Pumpkins</h4>
+                <span>Autumn Peak</span>
+            </div>
+            <div class="seasonal-card reveal" style="--d:.30s">
+                <div class="seasonal-icon">
+                    <img src="img/season-squash.webp" alt="Winter Squash">
+                </div>
+                <h4>Winter Squash</h4>
+                <span>Cold Season</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section" style="text-align:center; padding-top:2rem; padding-bottom:6rem;">
+        <div class="section-head">
+            <span class="section-tag">Get Answers</span>
+            <h2>Have Questions?</h2>
+            <p>Ask Sprout anything about FreshFind — from market hours to seasonal produce. Or browse the FAQ.</p>
+        </div>
+        <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+            <a href="chatbot.html" class="btn btn-primary">
+                Ask Sprout
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg>
+            </a>
+            <a href="faq.html" class="btn btn-outline">
+                Browse FAQ
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+        </div>
+    </section>
+
+</main>
+
+<script src="js/navbar.js" defer></script>
+
+<script>
+/* ── Auth gate for index.html ───────────────────────────────
+   Home page is public. Any link/button that leads AWAY from
+   index (except to the auth pages themselves) requires login.
+   Shows a stylish toast popup before redirecting.
+──────────────────────────────────────────────────────────── */
+(function () {
+  "use strict";
+
+  var FREE = {
+    "index.html": true,
+    "freshfind-login.html": true,
+    "freshfind-signup.html": true,
+    "": true
+  };
+
+  function isLoggedIn() {
+    try {
+      var u = JSON.parse(localStorage.getItem("freshfind_user") || "null");
+      return !!(u && u.loggedIn);
+    } catch (e) { return false; }
+  }
+
+  function pageFromHref(href) {
+    if (!href) return "";
+    var clean = href.split("?")[0].split("#")[0];
+    return clean.substring(clean.lastIndexOf("/") + 1) || "index.html";
+  }
+
+  /* ── Toast ── */
+  var toastActive = false;
+
+  function showLoginToast(destHref) {
+    if (toastActive) return;
+    toastActive = true;
+
+    /* Save intended destination */
+    try {
+      var full = new URL(destHref, window.location.href).href;
+      sessionStorage.setItem("freshfind_redirect", full);
+    } catch (e) {
+      sessionStorage.setItem("freshfind_redirect", destHref);
+    }
+
+    /* Inject CSS once */
+    if (!document.getElementById("ff-toast-style")) {
+      var style = document.createElement("style");
+      style.id = "ff-toast-style";
+      style.textContent = [
+        "@keyframes ff-toast-in{from{opacity:0;transform:translateY(20px) scale(.94)}to{opacity:1;transform:translateY(0) scale(1)}}",
+        "@keyframes ff-toast-out{from{opacity:1;transform:translateY(0) scale(1)}to{opacity:0;transform:translateY(16px) scale(.94)}}",
+        "@keyframes ff-progress{from{width:100%}to{width:0%}}",
+        "#ff-auth-toast{",
+          "position:fixed;bottom:28px;right:28px;z-index:99999;",
+          "background:#1F4635;color:#fff;",
+          "padding:0;border-radius:16px;",
+          "box-shadow:0 8px 32px rgba(15,35,25,.35),0 2px 8px rgba(15,35,25,.18);",
+          "width:320px;max-width:calc(100vw - 40px);",
+          "font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Manrope',sans-serif;",
+          "animation:ff-toast-in .38s cubic-bezier(.34,1.56,.64,1) forwards;",
+          "overflow:hidden;",
+        "}",
+        "#ff-auth-toast.ff-toast-hiding{animation:ff-toast-out .28s ease forwards;}",
+        "#ff-auth-toast-body{padding:18px 18px 14px;}",
+        "#ff-auth-toast-top{display:flex;align-items:flex-start;gap:13px;}",
+        "#ff-auth-toast-icon{",
+          "width:40px;height:40px;border-radius:10px;flex-shrink:0;",
+          "background:rgba(255,255,255,.15);",
+          "display:flex;align-items:center;justify-content:center;",
+        "}",
+        "#ff-auth-toast-icon svg{display:block;}",
+        "#ff-auth-toast-text{flex:1;min-width:0;}",
+        "#ff-auth-toast-title{font-size:.95rem;font-weight:700;margin:0 0 3px;color:#fff;letter-spacing:-.01em;}",
+        "#ff-auth-toast-msg{font-size:.8rem;margin:0;color:rgba(255,255,255,.75);line-height:1.45;}",
+        "#ff-auth-toast-actions{display:flex;gap:8px;margin-top:14px;}",
+        "#ff-auth-toast-login{",
+          "flex:1;padding:.55rem 1rem;border-radius:8px;border:none;cursor:pointer;",
+          "background:#6F9F72;color:#fff;font-size:.82rem;font-weight:700;",
+          "font-family:inherit;transition:background .2s;",
+        "}",
+        "#ff-auth-toast-login:hover{background:#5a8a5d;}",
+        "#ff-auth-toast-dismiss{",
+          "padding:.55rem .9rem;border-radius:8px;border:1px solid rgba(255,255,255,.22);",
+          "background:transparent;color:rgba(255,255,255,.8);font-size:.82rem;font-weight:600;",
+          "cursor:pointer;font-family:inherit;transition:background .2s,color .2s;",
+        "}",
+        "#ff-auth-toast-dismiss:hover{background:rgba(255,255,255,.12);color:#fff;}",
+        "#ff-auth-toast-bar{height:3px;background:rgba(255,255,255,.18);}",
+        "#ff-auth-toast-progress{height:100%;background:#6F9F72;animation:ff-progress 2.2s linear forwards;}"
+      ].join("");
+      document.head.appendChild(style);
+    }
+
+    /* Build toast */
+    var toast = document.createElement("div");
+    toast.id = "ff-auth-toast";
+    toast.setAttribute("role", "alert");
+    toast.setAttribute("aria-live", "assertive");
+    toast.innerHTML = [
+      '<div id="ff-auth-toast-body">',
+        '<div id="ff-auth-toast-top">',
+          '<div id="ff-auth-toast-icon">',
+            '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">',
+              '<rect x="3" y="11" width="18" height="11" rx="2"/>',
+              '<path d="M7 11V7a5 5 0 0 1 10 0v4"/>',
+            '</svg>',
+          '</div>',
+          '<div id="ff-auth-toast-text">',
+            '<p id="ff-auth-toast-title">Login Required</p>',
+            '<p id="ff-auth-toast-msg">Please sign in to access this page.</p>',
+          '</div>',
+        '</div>',
+        '<div id="ff-auth-toast-actions">',
+          '<button id="ff-auth-toast-login">Login / Sign Up</button>',
+          '<button id="ff-auth-toast-dismiss">Dismiss</button>',
+        '</div>',
+      '</div>',
+      '<div id="ff-auth-toast-bar"><div id="ff-auth-toast-progress"></div></div>'
+    ].join("");
+
+    document.body.appendChild(toast);
+
+    function doRedirect() {
+      toast.classList.add("ff-toast-hiding");
+      setTimeout(function () { window.location.href = "freshfind-login.html"; }, 300);
+    }
+
+    var timer = setTimeout(doRedirect, 2500);
+
+    document.getElementById("ff-auth-toast-login").addEventListener("click", function () {
+      clearTimeout(timer); doRedirect();
+    });
+    document.getElementById("ff-auth-toast-dismiss").addEventListener("click", function () {
+      clearTimeout(timer);
+      toast.classList.add("ff-toast-hiding");
+      setTimeout(function () { toast.remove(); toastActive = false; }, 300);
+    });
+  }
+
+  document.addEventListener("click", function (e) {
+    if (isLoggedIn()) return;
+    var anchor = e.target.closest("a[href]");
+    if (!anchor) return;
+    var href = anchor.getAttribute("href") || "";
+    if (href.startsWith("#")) return;
+    var pg = pageFromHref(href);
+    if (FREE[pg]) return;
+    e.preventDefault();
+    showLoginToast(href);
+  }, true);
+
+})();
+</script>
+</body>
+</html>

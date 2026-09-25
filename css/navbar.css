@@ -1,0 +1,802 @@
+/* =========================================================
+   FreshFind Navbar — Component Stylesheet
+   Scoped under .ff-navbar / .ff-mobile-menu so it can be
+   dropped into another page without leaking styles.
+   ========================================================= */
+
+/* ---------- Base / Variables ---------- */
+:root {
+  --ff-green-primary: #2F6B4F;
+  --ff-green-dark: #1F4635;
+  --ff-text: #000000;
+  --ff-surface: #FFFFFF;
+  --ff-surface-scrolled: rgba(255, 255, 255, 0.9);
+  --ff-shadow: 0 12px 32px rgba(15, 35, 25, 0.12);
+  --ff-font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", Roboto,
+    Helvetica, Arial, sans-serif;
+  /* Single source of truth for navbar height. The navbar is position:fixed
+     (out of flow), so other stylesheets (e.g. the hero) read these to reserve
+     its space. Overridden at small breakpoints below. */
+  --ff-height-top: 76px;
+  --ff-height-scrolled: 62px;
+  /* Height of the purpose ticker fixed above the navbar (see bottom of file). */
+  --ff-ticker-height: 34px;
+  --ff-ease: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.ff-navbar,
+.ff-navbar * {
+  box-sizing: border-box;
+}
+
+/* ---------- Navbar shell ---------- */
+.ff-navbar {
+  position: fixed;
+  /* Sits just below the fixed ticker strip, not at the very top. */
+  top: var(--ff-ticker-height, 34px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 100%;
+  background: var(--ff-surface);
+  border-radius: 0px;
+  box-shadow: none;
+  z-index: 1000;
+  font-family: var(--ff-font);
+  transition: width 0.4s var(--ff-ease), max-width 0.4s var(--ff-ease),
+    top 0.4s var(--ff-ease), border-radius 0.4s var(--ff-ease),
+    background-color 0.4s var(--ff-ease), box-shadow 0.4s var(--ff-ease);
+}
+
+.ff-navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* Same max width as the page container so the logo and links line up with
+     the content on wide screens instead of hugging the screen edges. */
+  max-width: var(--container-width, 1440px);
+  margin: 0 auto;
+  height: var(--ff-height-top);
+  padding: 0 48px;
+  gap: 1.5rem;
+  /* Guarantees any oversized child (e.g. a large source logo image) is
+     clipped to the navbar's own height instead of bleeding into the
+     ticker above or the page content below. */
+  overflow: hidden;
+  transition: height 0.4s var(--ff-ease), padding 0.4s var(--ff-ease);
+}
+
+/* Scrolled / floating state */
+.ff-navbar[data-ff-state="scrolled"] {
+  top: calc(var(--ff-ticker-height, 34px) + 16px);
+  max-width: 90%;
+  border-radius: 16px;
+  background: var(--ff-surface-scrolled);
+  box-shadow: var(--ff-shadow);
+  backdrop-filter: saturate(140%) blur(6px);
+}
+
+.ff-navbar[data-ff-state="scrolled"] .ff-navbar__inner {
+  height: var(--ff-height-scrolled);
+  padding: 0 32px;
+}
+
+/* ---------- Logo ---------- */
+.ff-navbar__logo {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: var(--ff-green-primary);
+  text-decoration: none;
+  white-space: nowrap;
+  /* Never let the logo shrink to nothing, but also never let its own
+     intrinsic (source-image) size dictate the navbar's layout — the
+     img rule below caps that independently of this. */
+  flex-shrink: 0;
+  max-width: 45%;
+}
+
+/* The source logo file is much larger than the navbar itself, so it is
+   capped to a fixed height that always fits inside var(--ff-height-top) /
+   var(--ff-height-scrolled) with room to spare; width is left to "auto"
+   so the image scales down/up without distorting its aspect ratio. This
+   is what keeps the logo fully inside the navbar and clear of the
+   hamburger/links at every width. */
+.ff-navbar__logo img {
+  display: block;
+  height: 60px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* ---------- Desktop navigation ---------- */
+.ff-navbar__nav {
+  display: flex;
+}
+
+.ff-navbar__links {
+  display: flex;
+  align-items: center;
+  gap: 2.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ff-navbar__link {
+  position: relative;
+  display: inline-block;
+  padding: 6px 0;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--ff-text);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.25s var(--ff-ease);
+}
+
+/* Hover / Active states */
+.ff-navbar__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0%;
+  background: var(--ff-green-primary);
+  transition: width 0.3s var(--ff-ease);
+}
+
+.ff-navbar__link:hover,
+.ff-navbar__link:focus-visible {
+  color: var(--ff-green-primary);
+}
+
+.ff-navbar__link:hover::after,
+.ff-navbar__link:focus-visible::after {
+  width: 100%;
+}
+
+.ff-navbar__link.is-active {
+  color: var(--ff-green-dark);
+  font-weight: 600;
+}
+
+.ff-navbar__link.is-active::after {
+  width: 100%;
+  background: var(--ff-green-dark);
+}
+
+/* ---------- Actions cluster (bookmark + auth + hamburger) ---------- */
+.ff-navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Bookmark */
+.ff-navbar__bookmark {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--ff-text);
+  cursor: pointer;
+  border-radius: 8px;
+  transition: color 0.25s var(--ff-ease), background-color 0.25s var(--ff-ease);
+}
+
+.ff-navbar__bookmark:hover,
+.ff-navbar__bookmark:focus-visible {
+  color: var(--ff-green-primary);
+  background: rgba(47, 107, 79, 0.08);
+}
+
+.ff-navbar__bookmark-icon {
+  width: 21px;
+  height: 21px;
+}
+
+.ff-navbar__bookmark-badge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  min-width: 16px;
+  height: 16px;
+  padding: 0 4px;
+  border-radius: 999px;
+  background: var(--ff-green-dark);
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 600;
+  line-height: 16px;
+  text-align: center;
+}
+
+/* Login / Signup button */
+.ff-navbar__auth {
+  display: inline-block;
+  padding: 0.6rem 1.35rem;
+  background: var(--ff-green-primary);
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  white-space: nowrap;
+  transition: background-color 0.25s var(--ff-ease);
+}
+
+.ff-navbar__auth:hover,
+.ff-navbar__auth:focus-visible {
+  background: var(--ff-green-dark);
+}
+
+/* ---------- Hamburger ---------- */
+.ff-navbar__hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  border-radius: 8px;
+}
+
+.ff-navbar__hamburger-line {
+  width: 21px;
+  height: 2px;
+  background: var(--ff-text);
+  border-radius: 2px;
+  transition: transform 0.3s var(--ff-ease), opacity 0.2s var(--ff-ease),
+    background-color 0.25s var(--ff-ease);
+}
+
+.ff-navbar__hamburger[aria-expanded="true"] .ff-navbar__hamburger-line:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.ff-navbar__hamburger[aria-expanded="true"] .ff-navbar__hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.ff-navbar__hamburger[aria-expanded="true"] .ff-navbar__hamburger-line:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ---------- Mobile menu panel ---------- */
+.ff-mobile-menu {
+  display: none;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  padding: 0 32px;
+  background: var(--ff-surface);
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  transition: max-height 0.35s var(--ff-ease), opacity 0.25s var(--ff-ease),
+    padding 0.35s var(--ff-ease);
+}
+
+.ff-mobile-menu.is-open {
+  max-height: 480px;
+  /* never taller than the screen below the navbar (landscape phones) */
+  max-height: min(480px, calc(100dvh - var(--ff-ticker-height) - var(--ff-height-top)));
+  overflow-y: auto;
+  opacity: 1;
+  padding: 12px 32px 24px;
+}
+
+.ff-mobile-menu__links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ff-mobile-menu__link {
+  display: block;
+  padding: 14px 4px;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--ff-text);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  transition: color 0.2s var(--ff-ease);
+}
+
+.ff-mobile-menu__link:hover,
+.ff-mobile-menu__link:focus-visible {
+  color: var(--ff-green-primary);
+}
+
+.ff-mobile-menu__link.is-active {
+  color: var(--ff-green-dark);
+  font-weight: 600;
+}
+
+.ff-mobile-menu__auth {
+  display: block;
+  margin-top: 18px;
+  padding: 0.75rem 1rem;
+  text-align: center;
+  background: var(--ff-green-primary);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.25s var(--ff-ease);
+}
+
+.ff-mobile-menu__auth:hover,
+.ff-mobile-menu__auth:focus-visible {
+  background: var(--ff-green-dark);
+}
+
+/* ---------- Responsive breakpoints ---------- */
+
+/* Small laptops / large tablets: the full link row is still shown, so
+   tighten spacing so the links never wrap or touch the logo. */
+@media (min-width: 901px) and (max-width: 1200px) {
+  .ff-navbar__inner {
+    padding: 0 24px;
+  }
+
+  .ff-navbar__links {
+    gap: 1rem;
+  }
+
+  .ff-navbar__link {
+    font-size: 0.88rem;
+  }
+
+  .ff-navbar__logo img {
+    height: 50px;
+  }
+
+  .ff-navbar__actions {
+    gap: 0.9rem;
+  }
+
+  .ff-navbar__auth {
+    padding: 0.55rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .ff-navbar[data-ff-state="scrolled"] {
+    max-width: 96%;
+  }
+
+  .ff-navbar[data-ff-state="scrolled"] .ff-navbar__inner {
+    padding: 0 18px;
+  }
+}
+
+@media (max-width: 900px) {
+  .ff-navbar__nav {
+    display: none;
+  }
+
+  .ff-navbar__auth {
+    display: none;
+  }
+
+  .ff-navbar__hamburger {
+    display: inline-flex;
+  }
+
+  .ff-mobile-menu {
+    display: block;
+  }
+
+  .ff-navbar__inner {
+    padding: 0 24px;
+  }
+
+  .ff-navbar[data-ff-state="scrolled"] {
+    max-width: 94%;
+  }
+
+  .ff-navbar[data-ff-state="scrolled"] .ff-navbar__inner {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --ff-height-top: 66px;
+    --ff-height-scrolled: 58px;
+    --ff-ticker-height: 28px;
+  }
+
+  .ff-navbar__inner {
+    padding: 0 16px;
+  }
+
+  .ff-navbar__logo {
+    font-size: 1.2rem;
+  }
+
+  .ff-navbar__logo img {
+    height: 44px;
+  }
+
+  .ff-navbar__actions {
+    gap: 1rem;
+  }
+
+  .ff-navbar[data-ff-state="scrolled"] {
+    top: calc(var(--ff-ticker-height, 28px) + 8px);
+    max-width: 96%;
+    border-radius: 12px;
+  }
+
+  .ff-navbar[data-ff-state="scrolled"] .ff-navbar__inner {
+    padding: 0 14px;
+  }
+
+  .ff-mobile-menu,
+  .ff-mobile-menu.is-open {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+/* ---------- Focus / accessibility ---------- */
+.ff-navbar a:focus-visible,
+.ff-navbar button:focus-visible {
+  outline: 2px solid var(--ff-green-primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .ff-navbar,
+  .ff-navbar__inner,
+  .ff-navbar__link,
+  .ff-navbar__link::after,
+  .ff-navbar__bookmark,
+  .ff-navbar__auth,
+  .ff-navbar__hamburger-line,
+  .ff-mobile-menu,
+  .ff-mobile-menu__link,
+  .ff-mobile-menu__auth {
+    transition: none !important;
+  }
+}
+
+/* ---------- Ticker (purpose strip, fixed above the navbar) ---------- */
+
+.ff-ticker {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+  width: 100%;
+  height: var(--ff-ticker-height);
+  overflow: hidden;
+  background: var(--ff-green-dark);
+  display: flex;
+  align-items: center;
+}
+
+.ff-ticker__track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  white-space: nowrap;
+  padding-left: 2.5rem;
+  animation: ff-ticker-scroll 28s linear infinite;
+}
+
+/* Pause on hover/keyboard focus so the text is easy to read on demand. */
+.ff-ticker:hover .ff-ticker__track,
+.ff-ticker:focus-within .ff-ticker__track {
+  animation-play-state: paused;
+}
+
+.ff-ticker__item {
+  position: relative;
+  padding-right: 2.75rem;
+  font-family: var(--ff-font);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.ff-ticker__item::after {
+  content: "\2726";
+  position: absolute;
+  top: 0;
+  right: 0.95rem;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.6rem;
+}
+
+/* The track is two identical copies of the content back to back;
+   scrolling exactly half its width loops it seamlessly. */
+@keyframes ff-ticker-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 480px) {
+  .ff-ticker__item {
+    font-size: 0.7rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ff-ticker {
+    overflow-x: auto;
+  }
+
+  .ff-ticker__track {
+    animation: none;
+  }
+}
+
+/* ---------- Page integration (contact / chatbot pages) ---------- */
+
+/* Page headers pad their top by --nav-h (index.css), so it has to cover the
+   fixed ticker + navbar, including the smaller sizes at 480px. */
+:root {
+  --nav-h: calc(var(--ff-ticker-height) + var(--ff-height-top));
+}
+
+html {
+  scroll-padding-top: calc(var(--ff-ticker-height) + var(--ff-height-top) + 16px);
+}
+
+/* Login modal and toast must sit above the fixed navbar (z-index 1000). */
+.modal-overlay,
+.toast {
+  z-index: 1100;
+}
+
+/* =========================================================
+   User Capsule + Dropdown — Auth state (logged in)
+   ========================================================= */
+
+/* ── Capsule wrapper ─────────────────────────────────────── */
+.ff-user-capsule {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* ── Pill button ─────────────────────────────────────────── */
+.ff-user-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.9rem 0.45rem 0.45rem;
+  background: var(--ff-green-primary);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  font-family: var(--ff-font);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.25s var(--ff-ease), box-shadow 0.25s var(--ff-ease),
+    transform 0.2s var(--ff-ease);
+  box-shadow: 0 2px 8px rgba(47, 107, 79, 0.25);
+}
+
+.ff-user-pill:hover,
+.ff-user-pill:focus-visible {
+  background: var(--ff-green-dark);
+  box-shadow: 0 4px 14px rgba(47, 107, 79, 0.35);
+}
+
+.ff-user-pill:active {
+  transform: scale(0.97);
+}
+
+/* Avatar circle inside pill */
+.ff-user-pill__avatar {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.78rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.ff-user-pill__name {
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Chevron — rotates when open */
+.ff-user-pill__chevron {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 0.1rem;
+  transition: transform 0.25s var(--ff-ease);
+  opacity: 0.85;
+}
+
+.ff-user-pill[aria-expanded="true"] .ff-user-pill__chevron {
+  transform: rotate(180deg);
+}
+
+/* ── Dropdown panel ──────────────────────────────────────── */
+.ff-user-dropdown {
+  position: absolute; /* positioned by JS via top/right on body */
+  min-width: 240px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 14px;
+  box-shadow: 0 8px 32px rgba(15, 35, 25, 0.14), 0 2px 8px rgba(15, 35, 25, 0.06);
+  z-index: 9999;
+  overflow: hidden;
+  /* hidden state */
+  opacity: 0;
+  transform: translateY(-8px) scale(0.97);
+  transform-origin: top right;
+  pointer-events: none;
+  transition: opacity 0.22s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ff-user-dropdown--open {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+/* Profile card */
+.ff-user-dropdown__card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.1rem;
+}
+
+.ff-user-dropdown__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--ff-green-primary);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.05rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.ff-user-dropdown__info {
+  overflow: hidden;
+}
+
+.ff-user-dropdown__name {
+  margin: 0 0 0.1rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #0f241b;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ff-user-dropdown__email {
+  margin: 0;
+  font-size: 0.76rem;
+  color: #6b7f75;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Divider */
+.ff-user-dropdown__divider {
+  margin: 0;
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+/* Logout button */
+.ff-user-dropdown__logout {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  width: 100%;
+  padding: 0.8rem 1.1rem;
+  background: none;
+  border: none;
+  font-family: var(--ff-font);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #c0392b;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.18s ease, color 0.18s ease;
+}
+
+.ff-user-dropdown__logout:hover,
+.ff-user-dropdown__logout:focus-visible {
+  background: rgba(192, 57, 43, 0.07);
+  color: #922b21;
+}
+
+/* ── Mobile auth slot — logged in ────────────────────────── */
+.ff-mobile-menu__auth--user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background: rgba(47, 107, 79, 0.08);
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--ff-green-dark);
+  cursor: default;
+  text-decoration: none;
+}
+
+.ff-mobile-logout-btn {
+  background: #c0392b;
+  color: #fff;
+  border: none;
+  padding: 0.35rem 0.85rem;
+  border-radius: 6px;
+  font-family: var(--ff-font);
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.ff-mobile-logout-btn:hover,
+.ff-mobile-logout-btn:focus-visible {
+  background: #922b21;
+}
+
+/* ── Responsive: hide desktop capsule on mobile ──────────── */
+@media (max-width: 900px) {
+  .ff-user-capsule:not(.ff-user-capsule--mobile) {
+    display: none;
+  }
+}

@@ -1,0 +1,24 @@
+FreshFind — image credits
+=========================
+
+All photos are free to use, including commercially, with no attribution required.
+They were found through Openverse (openverse.org) and downloaded into this folder,
+so the site does not load any images from external links.
+
+File                      Source      Licence   Original
+------------------------  ----------  --------  ----------------------------------------------------------
+market-carrots.jpg        StockSnap   CC0       https://stocksnap.io/photo/RKHZEX3629
+market-apples.jpg         StockSnap   CC0       https://stocksnap.io/photo/91E0HB20F8
+market-greens.jpg         StockSnap   CC0       https://stocksnap.io/photo/WLZ7N1WO0I
+market-sunflowers.jpg     StockSnap   CC0       https://stocksnap.io/photo/GLFUMCCQXI
+market-strawberries.jpg   StockSnap   CC0       https://stocksnap.io/photo/NAJN9P6LHG
+market-herbs.jpg          StockSnap   CC0       https://stocksnap.io/photo/XVIICAUSKR
+market-peaches.jpg        StockSnap   CC0       https://stocksnap.io/photo/C8VA0WIM0R
+market-cheese.jpg         StockSnap   CC0       https://stocksnap.io/photo/ABFRSZL8XB
+season-pumpkin.jpg        StockSnap   CC0       https://stocksnap.io/photo/15J9JFRC1K
+season-kale.jpg           StockSnap   CC0       https://stocksnap.io/photo/0TEOF2G1JS
+season-apples.jpg         StockSnap   CC0       https://stocksnap.io/photo/ZHNG376V5P
+season-honey.jpg          StockSnap   CC0       https://stocksnap.io/photo/97LJAKWL36
+season-herbs.jpg          StockSnap   CC0       https://stocksnap.io/photo/3LQ1ST1N01
+season-squash.webp        rawpixel    CC0       "Three butternut squash gray linen" (via Openverse / Wikimedia)
+hero-market.jpg           StockSnap   CC0       https://stocksnap.io/photo/AA39511B59
