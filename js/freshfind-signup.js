@@ -55,7 +55,12 @@ function initSignup() {
             showError('Email is already in use'); shakeElement(emailInput.parentElement); return;
         }
 
-        performSignup(name, email, password);
+        // Start epic animation
+        const submitBtn = form.querySelector('.btn-submit');
+        startDoorAnimation(submitBtn).then(() => {
+            // Actual signup logic after animation
+            performSignup(name, email, password);
+        });
     });
 }
 
@@ -232,3 +237,24 @@ authStyle.textContent = `
     }
 `;
 document.head.appendChild(authStyle);
+// === EPIC DOOR ANIMATION ===
+async function startDoorAnimation(btn) {
+    btn.disabled = true;
+    
+    // Phase 1: Door open
+    btn.classList.add('dooropen');
+    await wait(300);
+    
+    // Phase 2: Walking 
+    btn.classList.add('walking');
+    btn.classList.add('out');
+    await wait(750);
+    
+    // Phase 3: Remove classes and add happy
+    btn.classList.remove('walking', 'dooropen');
+    btn.classList.add('is-happy');
+}
+
+function wait(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}

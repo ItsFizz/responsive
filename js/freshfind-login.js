@@ -35,7 +35,11 @@ function initLogin() {
         if (!user) { showError('No account found with this email'); shakeElement(emailInput.parentElement); return; }
         if (user.password !== password) { showError('Incorrect password'); shakeElement(passwordInput.parentElement); return; }
 
-        performLogin(user);
+        // Start epic door animation, then log the user in
+        const submitBtn = form.querySelector('.btn-submit');
+        startDoorAnimation(submitBtn).then(() => {
+            performLogin(user);
+        });
     });
 
     // Input focus animations
@@ -199,3 +203,26 @@ authStyle.textContent = `
     }
 `;
 document.head.appendChild(authStyle);
+
+// === EPIC DOOR ANIMATION ===
+async function startDoorAnimation(btn) {
+    btn.disabled = true;
+    
+    // Phase 1: Door open
+    btn.classList.add('dooropen');
+    await wait(300);
+    
+    // Phase 2: Walking 
+    btn.classList.add('walking');
+    btn.classList.add('out');
+    await wait(750);
+    
+    // Phase 3: Stop the walk cycle, show the happy state and settle the door
+    // ('out' is kept so the figure stays at the door while 'is-happy' fades it out)
+    btn.classList.remove('walking', 'dooropen');
+    btn.classList.add('is-happy');
+}
+
+function wait(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}

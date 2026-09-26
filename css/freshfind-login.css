@@ -8,7 +8,6 @@
     --color-primary-dark: #1F4635;
     --color-primary-light: #6F9F72;
 
-    /* Legacy mappings */
     --forest-green: #2F6B4F;
     --leaf-green: #6F9F72;
     --warm-cream: #F8F5F1;
@@ -73,7 +72,8 @@ body {
 
 /* === LEFT BRANDING PANEL === */
 .auth-branding {
-    background: var(--color-primary);
+    background: linear-gradient(135deg, rgba(47, 107, 79, 0.85), rgba(47, 107, 79, 0.7)), 
+                url('../img/hero-market.jpg') center/cover no-repeat;
     color: var(--white);
     padding: 2.5rem 2.25rem;
     display: flex;
@@ -124,6 +124,22 @@ body {
     color: var(--color-primary);
     margin-bottom: 1.75rem;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Full FreshFind logo lockup inside the badge (login page).
+   The logo PNG is transparent with a dark green wordmark, so it sits on
+   the white badge for contrast. Additive modifier — the icon-only badge
+   used elsewhere is left untouched. */
+.brand-logo--img {
+    width: fit-content;
+    padding: 0 0.9rem;
+}
+
+.brand-logo--img img {
+    display: block;
+    height: 36px;
+    width: auto;
+    flex: 0 0 auto;
 }
 
 .brand-eyebrow {
@@ -436,6 +452,7 @@ body {
 
 /* === SUBMIT BUTTON === */
 .btn-submit {
+    position: relative;
     width: 100%;
     padding: 0.9rem 1.5rem;
     background: var(--color-primary);
@@ -453,11 +470,97 @@ body {
     margin-top: 0.35rem;
     box-shadow: 0 8px 20px rgba(47, 107, 79, 0.25);
     transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden;
+}
+
+/* Door (right side) */
+.btn-submit::after {
+    content: '';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 25px;
+    background: #8B4513;
+    border-radius: 2px;
+    border: 2px solid #654321;
+    transition: all 0.3s ease;
+}
+
+/* Door handle */
+.btn-submit::after {
+    box-shadow: inset -3px 0 0 #FFD700;
+}
+
+/* Stick figure (left side) */
+.btn-submit::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 20px;
+    background-image: 
+        /* Head */
+        radial-gradient(circle 3px at 6px 4px, white, transparent),
+        /* Body */
+        linear-gradient(white 1px, transparent 1px),
+        /* Arms */
+        linear-gradient(45deg, transparent 5px, white 5px, white 6px, transparent 6px),
+        linear-gradient(-45deg, transparent 5px, white 5px, white 6px, transparent 6px),
+        /* Legs */
+        linear-gradient(20deg, transparent 13px, white 13px, white 14px, transparent 14px),
+        linear-gradient(-20deg, transparent 13px, white 13px, white 14px, transparent 14px);
+    background-size: 12px 8px, 2px 8px, 8px 6px, 8px 6px, 8px 8px, 8px 8px;
+    background-position: 0 0, 5px 6px, 2px 9px, 6px 9px, 2px 14px, 6px 14px;
+    background-repeat: no-repeat;
+    transition: all 0.8s ease;
 }
 
 .btn-submit:hover {
     background: var(--color-primary-dark);
     transform: translateY(-1px);
+}
+
+/* Door open animation */
+.btn-submit.dooropen::after {
+    transform: translateY(-50%) perspective(100px) rotateY(45deg);
+    background: #A0522D;
+}
+
+/* Walking animation */
+.btn-submit.walking::before {
+    animation: walkCycle 0.4s linear infinite;
+}
+
+/* Walk out - figure moves to door */
+.btn-submit.out::before {
+    left: calc(100% - 40px);
+    opacity: 0.3;
+}
+
+/* Success state */
+.btn-submit.is-happy::before {
+    opacity: 0;
+}
+
+.btn-submit.is-happy::after {
+    transform: translateY(-50%) perspective(100px) rotateY(0deg);
+    background: #8B4513;
+}
+
+@keyframes walkCycle {
+    0% { 
+        background-position: 0 0, 5px 6px, 2px 9px, 6px 9px, 2px 14px, 6px 14px;
+    }
+    50% { 
+        background-position: 0 0, 5px 6px, 2px 9px, 6px 9px, 4px 14px, 4px 14px;
+    }
+    100% { 
+        background-position: 0 0, 5px 6px, 2px 9px, 6px 9px, 2px 14px, 6px 14px;
+    }
 }
 
 .btn-submit:active {
@@ -602,6 +705,15 @@ body {
         flex-shrink: 0;
     }
 
+    .brand-logo--img {
+        width: fit-content;
+        padding: 0 0.7rem;
+    }
+
+    .brand-logo--img img {
+        height: 28px;
+    }
+
     .brand-eyebrow {
         margin-bottom: 0.1rem;
         font-size: 0.65rem;
@@ -653,6 +765,15 @@ body {
         height: 36px;
         font-size: 1.1rem;
         border-radius: 10px;
+    }
+
+    .brand-logo--img {
+        width: fit-content;
+        padding: 0 0.6rem;
+    }
+
+    .brand-logo--img img {
+        height: 23px;
     }
 
     .brand-eyebrow {
@@ -750,6 +871,15 @@ body {
         height: 30px;
         font-size: 0.95rem;
         border-radius: 8px;
+    }
+
+    .brand-logo--img {
+        width: fit-content;
+        padding: 0 0.5rem;
+    }
+
+    .brand-logo--img img {
+        height: 19px;
     }
 
     .brand-title {
