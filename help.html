@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Help Centre | FreshFind</title>
+<meta name="description" content="Get help with FreshFind — FAQs, guides, and support for finding local markets.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥬</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/navbar.css">
+<link rel="stylesheet" href="css/help.css">
+</head>
+<body>
+
+<div class="help-progress" id="helpProgress"></div>
+
+<!-- TICKER -->
+<div class="ff-ticker" id="ffTicker">
+  <span class="sr-only">FreshFind helps you discover Karachi's local markets.</span>
+  <div class="ff-ticker__track" aria-hidden="true">
+    <span class="ff-ticker__item">Discover Karachi's local markets, all in one place</span>
+    <span class="ff-ticker__item">Know what's fresh, what's in season, and when to go</span>
+    <span class="ff-ticker__item">Real market hours. Real produce. Zero guesswork.</span>
+    <span class="ff-ticker__item">Built for Karachi shoppers who want it fresh, not stale</span>
+    <span class="ff-ticker__item">Discover Karachi's local markets, all in one place</span>
+    <span class="ff-ticker__item">Know what's fresh, what's in season, and when to go</span>
+    <span class="ff-ticker__item">Real market hours. Real produce. Zero guesswork.</span>
+    <span class="ff-ticker__item">Built for Karachi shoppers who want it fresh, not stale</span>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<header class="ff-navbar" id="ffNavbar" data-ff-state="top">
+  <div class="ff-navbar__inner">
+    <a href="index.html" class="ff-navbar__logo" aria-label="FreshFind home">
+      <img src="images/navbar/logo.png" alt="FreshFind">
+    </a>
+    <nav class="ff-navbar__nav" aria-label="Primary">
+      <ul class="ff-navbar__links">
+        <li><a href="index.html" class="ff-navbar__link" data-ff-nav-link>Home</a></li>
+        <li><a href="index.html#markets" class="ff-navbar__link" data-ff-nav-link>Markets</a></li>
+        <li><a href="index.html#produces" class="ff-navbar__link" data-ff-nav-link>Produces</a></li>
+        <li><a href="about.html" class="ff-navbar__link" data-ff-nav-link>About Us</a></li>
+        <li><a href="contact.html" class="ff-navbar__link" data-ff-nav-link>Contact Us</a></li>
+      </ul>
+    </nav>
+    <div class="ff-navbar__actions">
+      <button type="button" class="ff-navbar__bookmark" id="ffBookmarkBtn" aria-label="View saved items (0)">
+        <svg class="ff-navbar__bookmark-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M6 3.75C6 3.05964 6.55964 2.5 7.25 2.5H16.75C17.4404 2.5 18 3.05964 18 3.75V21L12 17L6 21V3.75Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+        </svg>
+        <span class="ff-navbar__bookmark-badge" id="ffBookmarkCount" data-ff-count>0</span>
+      </button>
+      <a href="freshfind-login.html" class="ff-navbar__auth">Login / Signup</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="help-hero">
+  <div class="help-hero__blob1"></div>
+  <div class="help-hero__blob2"></div>
+  <div class="help-hero__inner">
+    <span class="help-hero__eyebrow">Help Centre</span>
+    <h1>How can we <em>help?</em></h1>
+    <p class="help-hero__sub">Search our knowledge base, browse by category, or contact our support team. We're here to make FreshFind simple.</p>
+    
+    <div class="help-search-wrap">
+      <svg class="help-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+      <input type="text" class="help-search" id="helpSearch" placeholder="Search help articles..." autocomplete="off">
+      <button type="button" class="help-search-clear" id="helpSearchClear" aria-label="Clear search">×</button>
+    </div>
+
+    <div class="help-hero__stats">
+      <div class="help-hero__stat">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10,9 9,9 8,9"/></svg>
+        <span><strong>32</strong> articles</span>
+      </div>
+      <div class="help-hero__stat">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+        <span><strong>&lt;2 min</strong> avg read</span>
+      </div>
+      <div class="help-hero__stat">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+        <span><strong>97%</strong> helpful</span>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- CATEGORIES -->
+<section class="help-categories">
+  <h2 class="help-categories__title">Browse by topic</h2>
+  <div class="help-cat-grid">
+    <div class="help-cat-card is-active" data-cat="all">
+      <div class="help-cat-card__icon">📚</div>
+      <div>
+        <div class="help-cat-card__title">All Topics</div>
+        <div class="help-cat-card__count">32 articles</div>
+      </div>
+      <div class="help-cat-card__arrow">Browse <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+    </div>
+    
+    <div class="help-cat-card" data-cat="getting-started">
+      <div class="help-cat-card__icon">🚀</div>
+      <div>
+        <div class="help-cat-card__title">Getting Started</div>
+        <div class="help-cat-card__count">8 articles</div>
+      </div>
+      <div class="help-cat-card__arrow">Browse <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+    </div>
+    
+    <div class="help-cat-card" data-cat="markets">
+      <div class="help-cat-card__icon">🏪</div>
+      <div>
+        <div class="help-cat-card__title">Markets & Listings</div>
+        <div class="help-cat-card__count">12 articles</div>
+      </div>
+      <div class="help-cat-card__arrow">Browse <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+    </div>
+    
+    <div class="help-cat-card" data-cat="account">
+      <div class="help-cat-card__icon">👤</div>
+      <div>
+        <div class="help-cat-card__title">Account & Login</div>
+        <div class="help-cat-card__count">6 articles</div>
+      </div>
+      <div class="help-cat-card__arrow">Browse <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+    </div>
+    
+    <div class="help-cat-card" data-cat="troubleshooting">
+      <div class="help-cat-card__icon">🔧</div>
+      <div>
+        <div class="help-cat-card__title">Troubleshooting</div>
+        <div class="help-cat-card__count">6 articles</div>
+      </div>
+      <div class="help-cat-card__arrow">Browse <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+    </div>
+  </div>
+</section>
+<!-- FAQ SECTION -->
+<section class="help-faq" id="helpFaqSection">
+  <div class="help-faq__header">
+    <h2 class="help-faq__title" id="helpFaqTitle">All Articles</h2>
+    <div class="help-faq__count" id="helpFaqCount">32 articles</div>
+  </div>
+
+  <div class="help-accordion" id="helpAccordion">
+    
+    <!-- Getting Started -->
+    <div class="help-item" data-category="getting-started" data-search="what is freshfind platform how it works markets karachi local farmers">
+      <button class="help-item__btn" type="button">
+        <span class="help-item__q">What is FreshFind and how does it work?</span>
+        <span class="help-item__tag">Getting Started</span>
+        <div class="help-item__chevron">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"></polyline></svg>
+        </div>
+      </button>
+      <div class="help-item__body">
+        <div class="help-item__answer">
+          <p>FreshFind is a free platform that helps you discover local farmers markets in Karachi. We show you market locations, opening hours, seasonal produce availability, and connect you with fresh local food sources.</p>
+          <p>The platform works entirely in your browser — no apps to download, no accounts required for browsing. You can search markets by area, day of the week, or type of produce you're looking for.</p>
+          <p>Features include:</p>
+          <ul>
+            <li>Market directory with accurate timings and locations</li>
+            <li>Seasonal produce guides</li>
+            <li>Bookmark system to save favourite markets</li>
+            <li>AI chatbot assistant ("Sprout") for quick questions</li>
+            <li>Contact system for market organisers</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="help-item" data-category="getting-started" data-search="free cost payment subscription pricing">
+      <button class="help-item__btn" type="button">
+        <span class="help-item__q">Is FreshFind free to use?</span>
+        <span class="help-item__tag">Getting Started</span>
+        <div class="help-item__chevron">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"></polyline></svg>
+        </div>
+      </button>
+      <div class="help-item__body">
+        <div class="help-item__answer">
+          <p>Yes! FreshFind is completely free to use. There are no subscription fees, premium tiers, or hidden costs.</p>
+          <p>We believe access to fresh local food information should be available to everyone.</p>
+        </div>
+      </div>
+    </div>
+    <div class="help-item" data-category="markets" data-search="market hours timings when open close days schedule">
+      <button class="help-item__btn" type="button">
+        <span class="help-item__q">How accurate are the market hours?</span>
+        <span class="help-item__tag">Markets</span>
+        <div class="help-item__chevron">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"></polyline></svg>
+        </div>
+      </button>
+      <div class="help-item__body">
+        <div class="help-item__answer">
+          <p>We work hard to keep market hours accurate, but they can change due to weather, holidays, or other circumstances. Information is updated regularly through:</p>
+          <ul>
+            <li>Direct contact with market organisers</li>
+            <li>Community submissions and corrections</li>
+            <li>Regular verification calls</li>
+          </ul>
+          <p><strong>Always double-check</strong> with the market directly before making a special trip, especially during Ramadan, Eid, or extreme weather.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="help-item" data-category="account" data-search="create account register signup login password email">
+      <button class="help-item__btn" type="button">
+        <span class="help-item__q">How do I create an account?</span>
+        <span class="help-item__tag">Account</span>
+        <div class="help-item__chevron">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"></polyline></svg>
+        </div>
+      </button>
+      <div class="help-item__body">
+        <div class="help-item__answer">
+          <p>Click <strong>Login / Signup</strong> in the top navigation, then choose <strong>Create Account</strong>. You'll need:</p>
+          <ul>
+            <li>Your name</li>
+            <li>Email address</li>
+            <li>A password (minimum 8 characters)</li>
+          </ul>
+          <p><strong>Important:</strong> FreshFind accounts are stored locally in your browser, not on external servers. This keeps your data private, but means clearing your browser data will remove your account.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="help-item" data-category="account" data-search="bookmarks save favourite markets remember later">
+      <button class="help-item__btn" type="button">
+        <span class="help-item__q">How do bookmarks work?</span>
+        <span class="help-item__tag">Account</span>
+        <div class="help-item__chevron">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"></polyline></svg>
+        </div>
+      </button>
+      <div class="help-item__body">
+        <div class="help-item__answer">
+          <p>Bookmarks let you save your favourite markets for quick access later. You need a FreshFind account to use bookmarks.</p>
+          <p><strong>To bookmark a market:</strong> Look for the bookmark icon (📖) on market cards and click it. It will turn green when saved.</p>
+          <p><strong>To view bookmarks:</strong> Click the bookmark icon in the top navigation. You'll see all saved markets with their current status (open/closed).</p>
+          <p>Bookmarks are stored locally on your device and sync across browser tabs.</p>
+        </div>
+      </div>
+    </div>
+    <div class="help-item" data-category="markets" data-search="seasonal produce fresh what available now season fruits vegetables">
+      <button class="help-item__btn" type="button">
+        <span class="help-item__q">What does "seasonal produce" mean?</span>
+        <span class="help-item__tag">Markets</span>
+        <div class="help-item__chevron">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"></polyline></svg>
+        </div>
+      </button>
+      <div class="help-item__body">
+        <div class="help-item__answer">
+          <p>Seasonal produce refers to fruits and vegetables that are naturally in harvest during specific times of year. Eating seasonally means:</p>
+          <ul>
+            <li><strong>Fresher taste</strong> — crops are harvested at peak ripeness</li>
+            <li><strong>Better prices</strong> — abundant supply keeps costs down</li>
+            <li><strong>Environmental benefits</strong> — less transport and storage needed</li>
+          </ul>
+          <p>FreshFind's seasonal guides show what's at its best right now, updated monthly based on local growing cycles.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="help-item" data-category="troubleshooting" data-search="chatbot sprout not working ai assistant broken offline">
+      <button class="help-item__btn" type="button">
+        <span class="help-item__q">The chatbot isn't responding. How do I fix this?</span>
+        <span class="help-item__tag">Troubleshooting</span>
+        <div class="help-item__chevron">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"></polyline></svg>
+        </div>
+      </button>
+      <div class="help-item__body">
+        <div class="help-item__answer">
+          <p>If Sprout (the chatbot) isn't responding, try these steps:</p>
+          <ul>
+            <li><strong>Refresh the page</strong> — this reloads the chatbot data</li>
+            <li><strong>Check your connection</strong> — the chatbot needs internet to load its knowledge base</li>
+            <li><strong>Clear browser cache</strong> — go to Settings → Privacy → Clear browsing data</li>
+            <li><strong>Try a different browser</strong> — some ad blockers interfere with chatbot scripts</li>
+          </ul>
+          <p>If the problem persists, <a href="contact.html">contact our support team</a> — we'll get it sorted quickly.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="help-item" data-category="markets" data-search="add my market listing submit new market organizer vendor">
+      <button class="help-item__btn" type="button">
+        <span class="help-item__q">How do I add my market to FreshFind?</span>
+        <span class="help-item__tag">Markets</span>
+        <div class="help-item__chevron">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"></polyline></svg>
+        </div>
+      </button>
+      <div class="help-item__body">
+        <div class="help-item__answer">
+          <p>We'd love to list your market! <a href="contact.html">Contact us</a> with these details:</p>
+          <ul>
+            <li>Market name and location (area + landmarks)</li>
+            <li>Days and hours of operation</li>
+            <li>What produce you typically sell</li>
+            <li>Contact information for updates</li>
+            <li>Any seasonal changes or special notes</li>
+          </ul>
+          <p>We'll add your market within 2-3 working days and send you confirmation.</p>
+          <p><strong>Listing is free</strong> — FreshFind doesn't charge market organisers.</p>
+        </div>
+      </div>
+    </div>
+    <div class="help-item" data-category="troubleshooting" data-search="forgot password reset login account access locked">
+      <button class="help-item__btn" type="button">
+        <span class="help-item__q">I forgot my password. How do I reset it?</span>
+        <span class="help-item__tag">Troubleshooting</span>
+        <div class="help-item__chevron">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"></polyline></svg>
+        </div>
+      </button>
+      <div class="help-item__body">
+        <div class="help-item__answer">
+          <p><strong>Unfortunately, we can't reset passwords</strong> because FreshFind accounts are stored locally on your device, not on our servers.</p>
+          <p>Your options are:</p>
+          <ul>
+            <li><strong>Try password variations</strong> — common typos or old passwords you might have used</li>
+            <li><strong>Check saved passwords</strong> — your browser may have saved it (Settings → Passwords)</li>
+            <li><strong>Create a new account</strong> — you'll lose bookmarks but can start fresh</li>
+          </ul>
+          <p>This is a tradeoff of our privacy-first design — your data never leaves your device, so we can't help recover it.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="help-item" data-category="getting-started" data-search="mobile app download android ios smartphone">
+      <button class="help-item__btn" type="button">
+        <span class="help-item__q">Is there a mobile app?</span>
+        <span class="help-item__tag">Getting Started</span>
+        <div class="help-item__chevron">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,9 12,15 18,9"></polyline></svg>
+        </div>
+      </button>
+      <div class="help-item__body">
+        <div class="help-item__answer">
+          <p>There's no separate app — FreshFind works great in your mobile browser!</p>
+          <p>The site is fully responsive and optimized for phones. You can even <strong>add it to your home screen</strong> for app-like access:</p>
+          <ul>
+            <li><strong>iPhone:</strong> Tap the Share button → "Add to Home Screen"</li>
+            <li><strong>Android:</strong> Tap the menu (⋮) → "Add to Home screen"</li>
+          </ul>
+          <p>This gives you quick access without downloading anything.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="help-no-results" id="helpNoResults">
+    <div class="help-no-results__emoji">🔍</div>
+    <h3>No articles found</h3>
+    <p>Try a different search term or browse by category above.</p>
+  </div>
+</section>
+<!-- STILL NEED HELP BANNER -->
+<section class="help-banner">
+  <div class="help-banner__inner">
+    <div>
+      <div class="help-banner__eyebrow">Still stuck?</div>
+      <h2>We're here to help</h2>
+      <p>Can't find what you're looking for? Our support team responds within one working day and loves solving tricky problems.</p>
+    </div>
+    <div class="help-banner__actions">
+      <a href="contact.html" class="help-banner__btn help-banner__btn--primary">
+        Contact Support
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a href="chatbot.html" class="help-banner__btn help-banner__btn--ghost">
+        Ask Sprout
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<button class="back-to-top-help" id="backToTopHelp" aria-label="Back to top">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+</button>
+
+<script src="js/auth-gate.js"></script>
+<script src="js/navbar.js" defer></script>
+<script src="js/help.js" defer></script>
+</body>
+</html>
